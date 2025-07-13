@@ -13,6 +13,7 @@
 @import url("pygment.css");
 @import url("typogrify.css");
 @import url("fonts.css");
+@import url("zoeySite.css");
 
 /***** Global *****/
 /* Body */
@@ -39,7 +40,7 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 400;
     line-height: 1.1;
     margin-bottom: .8em;
-    font-family: 'Yanone Kaffeesatz', arial, serif;
+    font-family: system-ui, Quicksand, ui-rounded, "Hiragino Maru Gothic ProN", Quicksand, Comfortaa, Manjari, "Arial Rounded MT", "Arial Rounded MT Bold", Calibri, source-sans-pro, sans-serif;
 }
 
 h3, h4, h5, h6 { margin-top: .8em; }

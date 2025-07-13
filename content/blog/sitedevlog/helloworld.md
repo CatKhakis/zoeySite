@@ -1,7 +1,6 @@
 Title: Hello World!
-Date: 2025-7-11
 Category: Dev Log
-
+Date: 2025-7-11
 
 ### What could be a more fitting hello world than a dev log documenting making this very site?
 
@@ -20,5 +19,39 @@ Dillan Stock of The Stock Pot on Youtube posted [this fantastic video](https://y
 - share accounts of my convention experiences.
 - let me have fun !!!
 
+i'm so excited to get to make my own place on the internet. i've been wanting to make a blog for the longest time, but im a very busy puppy and starting is always the hardest part. i'll probably write a more indepth analysis but i really believe that more critters should focus on blogs rather than social media. social media is great in a lot of ways but i think its eroded a lot of *intentionality*. i'll expand on this when i write about ipods, physical photos, and my friend's amazing idea for bringing physical media back in the modern era.
 
+# pelican
+
+wow. this is a lot. 
+the version of me at the end of this post will be a lot smarter than i am now.
+
+the first time i dipped my paws into web dev was a few months ago and it has gotten me hooked. i started out using Processing javascript, hacking with some quickstart templates, and then going full into making ExpressJS backends and frontends. with how much i've fallen in love with js it's going to be weird departing it to build this site. 
+i'd like to have fun little interactable javascript elements, but the core of the website should be as lightweight as possible. modern web design really struggles with optimization and that is another facet of a lack of *intentionality*.
+
+making it is more important than making it perfect.
+
+# goals
+
+[ ] - business card top left with socials
+[ ] - zoey ref sheet page
+[ ] - fursuit work
+[ ] - list of projects with articles and pages inside
+
+
+## business card 'header'
+
+whats funny is that you can see this element right now! even though i havent designed it yet as of writing this!
+
+i've mocked up this concept for a business card that can sit on the left side of the site which can have a link to all my socials on the back. i'd like it to flip over with a nice 3d effect when its clicked but show the front side otherwise. i *think* this can be implemented with just css, but we will have to see if thats really possible.
+
+![Photo]({attach}card_mockup.png)
+
+
+
+
+
+## tangent
+
+something interesting about the modern internet is how browsers are SOOO advanced. the amount of things you can do purely via html and css is mind boggling. so then... why does the internet feel so dead now? its too sleek and too 'perfect'. its obviously not about the technology!
 
