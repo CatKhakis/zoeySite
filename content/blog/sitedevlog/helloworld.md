@@ -47,6 +47,12 @@ i've mocked up this concept for a business card that can sit on the left side of
 
 ![Photo]({attach}card_mockup.png)
 
+from digging into it this absolutely could be done with pure css. BUT it would not be dyanmic at all and would only be able to be a toggle. I'd like the card to "lift" a corner based on where the cursor is in relation to it. as far as i can tell thats not something that i can do with just css.
+
+pelican doesnt natively support javascript files so ill be using the [webassets](https://github.com/pelican-plugins/webassets) plugin rather than pelican_javascript which seems to be deprecated.
+
+I'm realizing that pure css for text cant give me the embossed look i want, so its time to delve into the very scary world of svg...
+
 
 
 
@@ -54,4 +60,6 @@ i've mocked up this concept for a business card that can sit on the left side of
 ## tangent
 
 something interesting about the modern internet is how browsers are SOOO advanced. the amount of things you can do purely via html and css is mind boggling. so then... why does the internet feel so dead now? its too sleek and too 'perfect'. its obviously not about the technology!
+
+the web went from something that was only accessed by the biggest nerds ever to something that ***everyone*** uses. i know from working retail that the average person is very *very* dumb. knowing that it makes plenty of sense to converge on the most simplistic streamlined design ever. the bastardizeation of the web isnt all bad i have to admit, sites are way more accessible than ever before and thats obviously a great thing. 
 

@@ -20,6 +20,7 @@ TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
+
 # Blogroll
 LINKS = (
     ("Pelican", "https://getpelican.com/"),
