@@ -51,7 +51,82 @@ from digging into it this absolutely could be done with pure css. BUT it would n
 
 pelican doesnt natively support javascript files so ill be using the [webassets](https://github.com/pelican-plugins/webassets) plugin rather than pelican_javascript which seems to be deprecated.
 
-I'm realizing that pure css for text cant give me the embossed look i want, so its time to delve into the very scary world of svg...
+I'm realizing that pure css for text cant give me the embossed look i want, so its time to delve into the very scary world of svg... i'm not going to act like i fully understand whats going on but ive gotten this to work:
+
+```
+<svg width="155px" height="45px" viewBox="0 0 155 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <defs>
+        <text id="text" font-family="Helvetica-Bold, Helvetica" font-size="30" font-weight="bold" fill="#E4A547">
+            <tspan x="1" y="23">violet lark</tspan>
+        </text>
+
+        <filter id="innershadow" x="-50%" y="-50%" width="200%" height="200%">
+            <feComponentTransfer in=SourceAlpha>
+                <feFuncA type="table" tableValues="1 0" />
+            </feComponentTransfer>
+
+            <feGaussianBlur stdDeviation="1.5"/>
+            <feOffset dx="0" dy="0" result="offsetblur"/>
+            <feFlood flood-color="#7A500F" flood-opacity=".2" result="color"/>
+            <feComposite in2="offsetblur" operator="in"/>
+            <feComposite in2="SourceAlpha" operator="in" />
+        </filter>
+
+        <filter id="topshadow" x="-50%" y="-50%" width="200%" height="200%">
+            <feComponentTransfer in=SourceAlpha>
+                <feFuncA type="table" tableValues="1 0" />
+            </feComponentTransfer>
+
+            <feGaussianBlur stdDeviation="1"/>
+            <feOffset dx="0" dy="1" result="offsetblur"/>
+            <feFlood flood-color="#7A500F" flood-opacity=".4" result="color"/>
+            <feComposite in2="offsetblur" operator="in"/>
+            <feComposite in2="SourceAlpha" operator="in" />
+        </filter>
+
+        <filter id="innershine" x="-50%" y="-50%" width="200%" height="200%">
+            <feComponentTransfer in=SourceAlpha>
+                <feFuncA type="table" tableValues="1 0" />
+            </feComponentTransfer>
+
+            <feGaussianBlur stdDeviation=".75"/>
+            <feOffset dx="0" dy="-1.5" result="offsetblur"/>
+            <feFlood flood-color="#FFFFFF" flood-opacity=".40" result="color"/>
+            <feComposite in2="offsetblur" operator="in"/>
+            <feComposite in2="SourceAlpha" operator="in" />
+        </filter>
+
+        <filter id="paperShine">
+            <feDropShadow dx="0" dy="1" stdDeviation="1" flood-color="#FFFFFF" flood-opacity=".75"/>
+        </filter>
+
+        <filter id="paperShadow">
+            <feDropShadow dx="0" dy="-.25" stdDeviation="1" flood-color="#9B7575" flood-opacity=".75"/>
+        </filter>
+
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" fill-opacity="1">
+        <g id="Violet-Lark-Copy" fill-rule="nonzero" fill="#E4A547">
+            
+            <use filter="url(#paperShadow)" xlink:href="#text"></use>
+            <use filter="url(#paperShine)" xlink:href="#text"></use>
+            <use xlink:href="#text"></use>
+            <use filter="url(#innershadow)" xlink:href="#text"></use>
+            <use filter="url(#topshadow)" xlink:href="#text"></use>
+            <use filter="url(#innershine)" xlink:href="#text"></use>
+            <!--
+            <use filter="url(#paperShadow)" xlink:href="#twitter"></use>
+            <use filter="url(#paperShine)" xlink:href="#twitter"></use>
+            <use xlink:href="#twitter"></use>
+            <use filter="url(#innershadow)" xlink:href="#twitter"></use>
+            <use filter="url(#topshadow)" xlink:href="#twitter"></use>
+            <use filter="url(#innershine)" xlink:href="#twitter"></use>
+            -->
+        </g>
+    </g>
+</svg>
+```
 
 
 

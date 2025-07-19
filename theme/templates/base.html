@@ -8,7 +8,15 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<meta name="generator" content="Pelican" />
 	<title>{% block title %}{{ SITENAME|striptags }}{%endblock%}</title>
+
 	<link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/{{ CSS_FILE }}" />
+
+	<!--
+	{% assets filters="cssmin", output="css/style.min.css", "css/*.css" %}
+		<link rel="stylesheet" href="{{SITEURL}}/{{ASSET_URL}}">
+	{% endassets %}
+	-->
+
 	{% if FEED_ALL_ATOM %}
 	<link
 		href="{{ FEED_DOMAIN }}/{% if FEED_ALL_ATOM_URL %}{{ FEED_ALL_ATOM_URL }}{% else %}{{ FEED_ALL_ATOM }}{% endif %}"
@@ -26,123 +34,7 @@
 <body id="index" class="home flexRow">
 
 	<div id="leftContent">
-
-		<div id="cardHolder">
-			<div id="businessCard">
-				<div class="insideBox">
-					<div id="front">
-						<div class="squareRatio">
-							<div id="logo"></div>
-						</div>
-
-						<div id="card-info">
-							<svg width="155px" height="26px" viewBox="0 0 155 26" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-								<title>Violet Lark Copy</title>
-								<defs>
-									<text id="text" font-family="Helvetica-Bold, Helvetica" font-size="30" font-weight="bold" fill="#E4A547">
-										<tspan x="1" y="23">Violet !</tspan>
-									</text>
-									<filter x="-0.9%" y="14.0%" width="102.0%" height="76.5%" filterUnits="objectBoundingBox" id="filter-2">
-										<feOffset dx="0" dy="1" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
-										<feGaussianBlur stdDeviation="0.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
-										<feColorMatrix values="0 0 0 0 0.91372549   0 0 0 0 0.878431373   0 0 0 0 0.878431373  0 0 0 0.8 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
-										<feMorphology radius="0.125" operator="erode" in="SourceAlpha" result="shadowSpreadOuter2"></feMorphology>
-										<feOffset dx="0" dy="-0.5" in="shadowSpreadOuter2" result="shadowOffsetOuter2"></feOffset>
-										<feGaussianBlur stdDeviation="0.5" in="shadowOffsetOuter2" result="shadowBlurOuter2"></feGaussianBlur>
-										<feColorMatrix values="0 0 0 0 0.607843137   0 0 0 0 0.458823529   0 0 0 0 0.458823529  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter2" result="shadowMatrixOuter2"></feColorMatrix>
-										<feMerge>
-											<feMergeNode in="shadowMatrixOuter1"></feMergeNode>
-											<feMergeNode in="shadowMatrixOuter2"></feMergeNode>
-										</feMerge>
-									</filter>
-									<filter x="-0.9%" y="14.0%" width="102.0%" height="76.5%" filterUnits="objectBoundingBox" id="filter-3">
-										<feGaussianBlur stdDeviation="0.5" in="SourceAlpha" result="shadowBlurInner1"></feGaussianBlur>
-										<feOffset dx="0" dy="-1" in="shadowBlurInner1" result="shadowOffsetInner1"></feOffset>
-										<feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
-										<feColorMatrix values="0 0 0 0 0.964705882   0 0 0 0 0.91372549   0 0 0 0 0.831372549  0 0 0 0.5 0" type="matrix" in="shadowInnerInner1" result="shadowMatrixInner1"></feColorMatrix>
-										<feMorphology radius="0.25" operator="dilate" in="SourceAlpha" result="shadowSpreadInner2"></feMorphology>
-										<feGaussianBlur stdDeviation="0.75" in="shadowSpreadInner2" result="shadowBlurInner2"></feGaussianBlur>
-										<feOffset dx="0" dy="0.5" in="shadowBlurInner2" result="shadowOffsetInner2"></feOffset>
-										<feComposite in="shadowOffsetInner2" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner2"></feComposite>
-										<feColorMatrix values="0 0 0 0 0.478431373   0 0 0 0 0.31372549   0 0 0 0 0.0588235294  0 0 0 0.75 0" type="matrix" in="shadowInnerInner2" result="shadowMatrixInner2"></feColorMatrix>
-										<feGaussianBlur stdDeviation="0.75" in="SourceAlpha" result="shadowBlurInner3"></feGaussianBlur>
-										<feOffset dx="0" dy="0" in="shadowBlurInner3" result="shadowOffsetInner3"></feOffset>
-										<feComposite in="shadowOffsetInner3" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner3"></feComposite>
-										<feColorMatrix values="0 0 0 0 0.482352941   0 0 0 0 0.309803922   0 0 0 0 0.0352941176  0 0 0 0.4 0" type="matrix" in="shadowInnerInner3" result="shadowMatrixInner3"></feColorMatrix>
-										<feMerge>
-											<feMergeNode in="shadowMatrixInner1"></feMergeNode>
-											<feMergeNode in="shadowMatrixInner2"></feMergeNode>
-											<feMergeNode in="shadowMatrixInner3"></feMergeNode>
-										</feMerge>
-									</filter>
-									<filter x="-0.9%" y="14.0%" width="102.0%" height="76.5%" filterUnits="objectBoundingBox" id="filter-4">
-										<feGaussianBlur stdDeviation="0.5" in="SourceAlpha" result="shadowBlurInner1"></feGaussianBlur>
-										<feOffset dx="0" dy="-1" in="shadowBlurInner1" result="shadowOffsetInner1"></feOffset>
-										<feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
-										<feColorMatrix values="0 0 0 0 0.964705882   0 0 0 0 0.91372549   0 0 0 0 0.831372549  0 0 0 0.5 0" type="matrix" in="shadowInnerInner1" result="shadowMatrixInner1"></feColorMatrix>
-										<feMorphology radius="0.25" operator="dilate" in="SourceAlpha" result="shadowSpreadInner2"></feMorphology>
-										<feGaussianBlur stdDeviation="0.75" in="shadowSpreadInner2" result="shadowBlurInner2"></feGaussianBlur>
-										<feOffset dx="0" dy="0.5" in="shadowBlurInner2" result="shadowOffsetInner2"></feOffset>
-										<feComposite in="shadowOffsetInner2" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner2"></feComposite>
-										<feColorMatrix values="0 0 0 0 0.478431373   0 0 0 0 0.31372549   0 0 0 0 0.0588235294  0 0 0 0.75 0" type="matrix" in="shadowInnerInner2" result="shadowMatrixInner2"></feColorMatrix>
-										<feGaussianBlur stdDeviation="0.75" in="SourceAlpha" result="shadowBlurInner3"></feGaussianBlur>
-										<feOffset dx="0" dy="0" in="shadowBlurInner3" result="shadowOffsetInner3"></feOffset>
-										<feComposite in="shadowOffsetInner3" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner3"></feComposite>
-										<feColorMatrix values="0 0 0 0 0.482352941   0 0 0 0 0.309803922   0 0 0 0 0.0352941176  0 0 0 0.4 0" type="matrix" in="shadowInnerInner3" result="shadowMatrixInner3"></feColorMatrix>
-										<feMerge>
-											<feMergeNode in="shadowMatrixInner1"></feMergeNode>
-											<feMergeNode in="shadowMatrixInner2"></feMergeNode>
-											<feMergeNode in="shadowMatrixInner3"></feMergeNode>
-										</feMerge>
-									</filter>
-
-									<filter id="innershadow" filterUnits="objectBoundingBox" >
-										<feOffset in="SourceAlpha" dx="5" dy="5" />
-									</filter>
-
-									<filter id="spec">
-										<feSpecularLighting
-										result="specOut"
-										specularExponent="20"
-										lighting-color="#bbbbbb">
-										<fePointLight x="50" y="75" z="200" />
-										</feSpecularLighting>
-										<feComposite
-										in="SourceGraphic"
-										in2="specOut"
-										operator="arithmetic"
-										k1="0"
-										k2="1"
-										k3="1"
-										k4="0" />
-									</filter>
-								</defs>
-								<g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" fill-opacity="1">
-									<g id="Violet-Lark-Copy" fill-rule="nonzero" fill="#E4A547">
-
-										<use xlink:href="#text"></use>
-										<use filter="url(#spec)" xlink:href="#text"></use>
-
-										<!-- 
-										<use filter="url(#filter-2)" xlink:href="#text-1"></use>
-										<use filter="url(#filter-3)" xlink:href="#text-1"></use>
-										<use filter="url(#filter-4)" xlink:href="#text-1"></use> 
-										-->
-									</g>
-								</g>
-							</svg>
-						</div>
-					</div>
-
-					<div id="back">
-						<div id="social-info">
-
-							
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
+		{% include 'businesscard.html' %}
 	</div>
 
 	<div id="centerContent">
@@ -215,10 +107,18 @@
 
 	</div>
 
-	<div id="rightContent">test</div>
+	<div id="rightContent">
 
-	{% assets filters="rjsmin", output="js/packed.js", "js/test.js" %}
-	<script src="{{SITEURL}}/{{ASSET_URL}}"></script>
+		<div id="shadeSelector">
+			<div class="latte">{{ lucide("sun") }}</div>
+			<div class="frappe">{{ lucide("sparkles") }}</div>
+			<div class="macchiato">{{ lucide("moon") }}</div>
+			<div class="mocha">{{ lucide("moon-star") }}</div>
+		</div>
+	</div>
+
+	{% assets filters="rjsmin", output="js/packed.js", "js/*.js" %}
+		<script src="{{SITEURL}}/{{ASSET_URL}}"></script>
 	{% endassets %}
 </body>
 

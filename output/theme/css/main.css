@@ -13,13 +13,15 @@
 @import url("pygment.css");
 @import url("typogrify.css");
 @import url("fonts.css");
+
 @import url("zoeySite.css");
+
+@import url("colors.css");
+@import url('catppuccin.css');
 
 /***** Global *****/
 /* Body */
 body {
-    background: #F5F4EF;
-    color: #000305;
     font-size: 87.5%; /* Base font size: 14px */
     font-family: 'Trebuchet MS', Trebuchet, 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     line-height: 1.429;
@@ -50,16 +52,14 @@ hr { border: 2px solid #EEEEEE; }
 /* Anchors */
 a {outline: 0;}
 a img {border: 0px; text-decoration: none;}
+
 a:link, a:visited {
-    color: #C74350;
     padding: 0 1px;
     text-decoration: underline;
 }
+
 a:hover, a:active {
-    background-color: #C74350;
-    color: #fff;
     text-decoration: none;
-    text-shadow: 1px 1px 1px #333;
 }
 
 h1 a:hover {
@@ -184,7 +184,6 @@ div.figure p.caption, figure p.caption { /* margin provided by figure */
 }
 
 #banner h1 a:link, #banner h1 a:visited {
-    color: #000305;
     display: block;
     font-weight: bold;
     margin: 0 0 0 .2em;
@@ -192,7 +191,6 @@ div.figure p.caption, figure p.caption { /* margin provided by figure */
 }
 #banner h1 a:hover, #banner h1 a:active {
     background: none;
-    color: #C74350;
     text-shadow: none;
 }
 
@@ -200,7 +198,6 @@ div.figure p.caption, figure p.caption { /* margin provided by figure */
 
 	/* Main Nav */
 #banner nav {
-    background: #000305;
     font-size: 1.143em;
     overflow: auto;
     line-height: 30px;
@@ -218,17 +215,10 @@ div.figure p.caption, figure p.caption { /* margin provided by figure */
 #banner nav li {float: left; display: inline; margin: 0;}
 
 #banner nav a:link, #banner nav a:visited {
-    color: #fff;
     display: inline-block;
     height: 30px;
     padding: 5px 1.5em;
     text-decoration: none;
-}
-#banner nav a:hover, #banner nav a:active,
-#banner nav .active a:link, #banner nav .active a:visited {
-    background: #C74451;
-    color: #fff;
-    text-shadow: none !important;
 }
 
 #banner nav li:first-child a {
@@ -245,7 +235,6 @@ div.figure p.caption, figure p.caption { /* margin provided by figure */
 	Featured
 *****************/
 #featured {
-    background: #fff;
     margin-bottom: 2em;
     overflow: hidden;
     padding: 20px;
@@ -274,7 +263,6 @@ div.figure p.caption, figure p.caption { /* margin provided by figure */
 	Body
 *****************/
 #content {
-    background: #fff;
     margin-bottom: 2em;
     overflow: hidden;
     padding: 20px 20px;
@@ -365,7 +353,7 @@ li:first-child .hentry, #content > .hentry {border: 0; margin: 0;}
 #content > .hentry {padding: 1em 0;}
 .hentry img{display : none ;}
 .entry-title {font-size: 3em; margin-bottom: 10px; margin-top: 0;}
-.entry-title a:link, .entry-title a:visited {text-decoration: none; color: #333;}
+.entry-title a:link, .entry-title a:visited {text-decoration: none;}
 .entry-title a:visited {background-color: #fff;}
 
 .hentry .post-info * {font-style: normal;}
