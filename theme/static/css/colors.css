@@ -16,6 +16,7 @@
     --crust: var(--ctp-latte-crust);
 
     --red: var(--ctp-latte-red);
+    --yellow: var(--ctp-latte-yellow);
 }
 
 .latte {
@@ -53,30 +54,42 @@
     color: var(--text);
 }
 
-.entry-title a:link, .entry-title a:visited {
-    color: var(--text);
-}
-
 
 body {
     background: var(--crust);
 }
 
-#banner nav {
+#banner nav, #shadeSelector {
     background: var(--surface2);
+    box-shadow: 
+    inset 0px 1px 3px color-mix(in hsl, hsl(from var(--surface2) h s l), white 20%),
+    inset 0px -1px 4px color-mix(in hsl, hsl(from var(--surface2) h s l), black 60%);
 }
 
-#featured, #content {
+#featured, #content, #article_title div {
     background: var(--surface0);
+    box-shadow: 
+    inset 0px 1px 3px color-mix(in hsl, hsl(from var(--surface0) h s l), white 20%),
+    inset 0px -1px 4px color-mix(in hsl, hsl(from var(--surface0) h s l), black 60%);
 }
+
+#article_title div .datacontainer {
+    background-color: var(--mantle);
+    box-shadow: 
+    inset 0px -1px 2px color-mix(in hsl, hsl(from var(--mantle) h s l), white 20%),
+    inset 0px 1px 2px color-mix(in hsl, hsl(from var(--mantle) h s l), black 20%);
+}
+
+
 
 #businessCard {
     background-color: var(--text);
     box-shadow: inset 2px 2px 3px var(--overlay2), inset -2px -2px 3px var(--surface2);
 }
 
+
+
 #shadeSelector {
-    background: var(--surface2);
     color: var(--text);
 }
 
@@ -87,6 +100,7 @@ body {
 #shadeSelector div:hover {
     outline: solid 3px var(--red);
 }
+
 
 
 
@@ -111,4 +125,8 @@ a:hover, a:active {
 
 #banner h1 a:hover, #banner h1 a:active {
     color: var(--red);
+}
+
+.entry-title a:link, .entry-title a:visited {
+    color: var(--ctp-latte-yellow);
 }
