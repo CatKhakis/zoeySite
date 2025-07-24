@@ -9,11 +9,16 @@
   {% endif %}
 {% endblock %}
 
+
 {% block content %}
+
+{% include 'page_title.html' %}
+
   <section id="content" class="body">
-    <h1 class="entry-title">{{ page.title }}</h1>
-    {% import 'translations.html' as translations with context %}
-    {{ translations.translations_for(page) }}
-    {{ page.content }}
+    <div class="entry-content">
+      
+      {{ page.content }}
+    </div><!-- /.entry-content -->
+      
   </section>
 {% endblock %}

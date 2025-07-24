@@ -22,8 +22,8 @@
 /***** Global *****/
 /* Body */
 body {
-    font-size: 87.5%; /* Base font size: 14px */
-    font-family: 'Trebuchet MS', Trebuchet, 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 100%; /* Base font size: 14px */
+    font-family: 'Helvetica neue', 'Helvetica';
     line-height: 1.429;
     margin: 0;
     padding: 0;
@@ -148,7 +148,7 @@ aside, nav, article, figure {
 }
 
 /***** Layout *****/
-.body {clear: both; margin: 0 auto; max-width: 800px;}
+.body {clear: both; margin: 0 auto; max-width: 850px;}
 img { max-width: 100%; }
 img.right, figure.right, div.figure.align-right {
     float: right;
@@ -204,14 +204,14 @@ div.figure p.caption, figure p.caption { /* margin provided by figure */
     margin: 0 auto 2em auto;
     padding: 0;
     text-align: center;
-    max-width: 800px;
+    max-width: 900px;
 
     border-radius: 5px;
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px;
 }
 
-#banner nav ul {list-style: none; margin: 0 auto; max-width: 800px;}
+#banner nav ul {list-style: none; margin: 0 auto; max-width: 900px;}
 #banner nav li {float: left; display: inline; margin: 0;}
 
 #banner nav a:link, #banner nav a:visited {
@@ -266,7 +266,7 @@ div.figure p.caption, figure p.caption { /* margin provided by figure */
     margin-bottom: 2em;
     overflow: hidden;
     padding: 20px 20px;
-    max-width: 760px;
+    max-width: 810px;
 
     border-radius: 10px;
     -moz-border-radius: 10px;

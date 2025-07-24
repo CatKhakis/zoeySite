@@ -18,7 +18,8 @@
 
 {% block content %}
 
-{% include 'article_title.html' %}
+{% from 'article_title.html' import content_title %}
+{{ content_title(article, true) }}
 
   <section id="content" class="body">
     <article>

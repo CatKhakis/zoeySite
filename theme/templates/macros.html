@@ -1,0 +1,10 @@
+{% macro clean_break() -%}
+<div>[page break should go here]</div>
+{%- endmacro %}
+
+{% macro color(hex, label) -%}
+<div class="colordisplay flexRow">
+    <div style="background-color:{{ hex }};"></div>
+    <h5>{{ hex }} - {{ label }}</h5>
+</div>
+{%- endmacro %}

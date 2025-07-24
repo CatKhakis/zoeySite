@@ -1,50 +1,42 @@
+{% macro content_title(article, independent) -%}
+	<section class="body">
+		<article>
 
-<section class="body">
-	<article>
+			{% if independent == true %}
+			<header id="article_title">
+			{% else %}
+			<header id="article_title" class="hidden">
+			{% endif %}
+				<div class="left">
+					<h1 class="entry-title">
+						<a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark"
+							title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a>
+					</h1>
+				</div>
 
-		<header id="article_title">
-			<div class="left">
-				<h1 class="entry-title">
-					<a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark"
-						title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a>
-				</h1>
-			</div>
+				<div class="right">
 
-			<div class="right">
-				<footer class="post-info">
+					<div class="flexColumn invisibleDiv">
+						<div class="flexRow invisibleDiv">
+							<div class="datacontainer flexCenter" title="{{ article.date.isoformat() }}">
+								{{ article.month }}
+							</div>
+							<div class="datacontainer flexCenter">
+								{{ article.day }}
+							</div>
+						</div>
 
-					<div class="datacontainer" title="{{ article.date.isoformat() }}">
-						Published: {{ article.locale_date }}
+						<div class="datacontainer flexCenter">
+							{{ article.year }}
+						</div>
 					</div>
 
-					{% if article.modified %}
+					<div class="flexCenter">
+						[tags placeholder]
+					</div>
+				</div>
 
-					<br />
-
-					<abbr class="modified" title="{{ article.modified.isoformat() }}">
-						Updated: {{ article.locale_modified }}
-					</abbr>
-					{% endif %}
-					
-					<!--  
-					{% if article.authors %}
-					<address class="vcard author">
-						By {% for author in article.authors %}
-						<a class="url fn" href="{{ SITEURL }}/{{ author.url }}">{{ author }}</a>
-						{% endfor %}
-					</address>
-					{% endif %}
-					-->
-
-					<p>In <a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a>.</p>
-					{% include 'taglist.html' %}
-					{% import 'translations.html' as translations with context %}
-					{{ translations.translations_for(article) }}
-				</footer><!-- /.post-info -->
-
-				{% include 'twitter.html' %}
-			</div>
-
-		</header>
-	</article>
-</section>
+			</header>
+		</article>
+	</section>
+{%- endmacro %}

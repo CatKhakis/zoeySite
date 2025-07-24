@@ -11,7 +11,7 @@
 	<link rel="stylesheet" href="/theme/css/main.css" />
 
 	<!--
-		<link rel="stylesheet" href="/theme/css/style.min.css?bf90632f">
+		<link rel="stylesheet" href="/theme/css/style.min.css?7f774c74">
 	-->
 
     <meta name="description" content="What could be a more fitting hello world than a dev log documenting making this very site? orignally i had intended on using Ghost for blogging..." />
@@ -123,47 +123,49 @@
 			<h1><a href="/">zoeySite</a></h1>
 			<nav>
 				<ul>
-					<li><a href="/pages/home.html">home</a></li>
+					<li><a href="/pages/zoeys-refsheet.html">Zoey's Refsheet</a></li>
 						<li class="active" ><a href="/category/dev-log.html">Dev Log</a></li>
 				</ul>
 			</nav>
 		</header><!-- /#banner -->
 
-
 <section class="body">
-	<article>
+		<article>
 
-		<header id="article_title">
-			<div class="left">
-				<h1 class="entry-title">
-					<a href="/2025/hello-world.html" rel="bookmark"
-						title="Permalink to Hello World!">Hello World!</a>
-				</h1>
-			</div>
+			<header id="article_title">
+				<div class="left">
+					<h1 class="entry-title">
+						<a href="/2025/hello-world.html" rel="bookmark"
+							title="Permalink to Hello World!">Hello World!</a>
+					</h1>
+				</div>
 
-			<div class="right">
-				<footer class="post-info">
+				<div class="right">
 
-					<div class="datacontainer" title="2025-07-11T00:00:00-05:00">
-						Published: Fri 11 July 2025
+					<div class="flexColumn invisibleDiv">
+						<div class="flexRow invisibleDiv">
+							<div class="datacontainer flexCenter" title="2025-07-11T00:00:00-05:00">
+								July
+							</div>
+							<div class="datacontainer flexCenter">
+								11
+							</div>
+						</div>
+
+						<div class="datacontainer flexCenter">
+							2025
+						</div>
 					</div>
 
-					
-					<!--  
-					<address class="vcard author">
-						By 						<a class="url fn" href="/author/zoey.html">zoey</a>
-					</address>
-					-->
+					<div class="flexCenter">
+						[tags placeholder]
+					</div>
+				</div>
 
-					<p>In <a href="/category/dev-log.html">Dev Log</a>.</p>
-					
-				</footer><!-- /.post-info -->
+			</header>
+		</article>
+	</section>
 
-			</div>
-
-		</header>
-	</article>
-</section>
   <section id="content" class="body">
     <article>
       <div class="entry-content">
@@ -172,6 +174,8 @@
 <p>orignally i had intended on using Ghost for blogging purposes but it was far too 'polished' for me. i wanted something that i could really make my own rather than something that looks nice by default. i have been very inspired by <a href="https://eev.ee">eevee's site</a> that she recently redesigned at the time of writing this. her blog post <a href="https://eev.ee/blog/2024/12/03/fresh-start/">Fresh start</a> details her feelings about the blog itself and the direction she wants to take it. she gave her reasoning for opting to use pelican as the backbone for the site and since i trust her knowledge and enjoy the design of it i thought i might as well follow her paw prints and go the same route.</p>
 <p>i'd like to outline my goals and methodology in this first post and will update links to future posts about developing specific features.
 Dillan Stock of The Stock Pot on Youtube posted <a href="https://youtu.be/3zfIUSg9lm4?si=EwVH8olMrU9eg_5c">this fantastic video</a> discussing his goals for his smart home and i find his thought process absolutely genius. i highly reccomend his channel- nothing but the best content, especially if you're interesting in smart home automation in the slightest. he breaks it down into what he actually <em>wants</em> rather than being influenced by what flashy smart home gadgets exist out there. finding specific devices is about what fits your desires, not picking up the cool devices and trying to force your desires to fit that product. this is why Ghost wasnt the right pick for this site. yes- its a good product as far as i can tell but its not primarily addressing what i want out of a blog. its the flashy smart home device that i could learn, but i'd be tackling it the wrong way. </p>
+<div>[page break should go here]</div>
+
 <h3>i want this site to</h3>
 <ul>
 <li>be a place where i can <em>really</em> get into the weeds on projects im doing. </li>
@@ -201,83 +205,10 @@ i'd like to have fun little interactable javascript elements, but the core of th
 <p>from digging into it this absolutely could be done with pure css. BUT it would not be dyanmic at all and would only be able to be a toggle. I'd like the card to "lift" a corner based on where the cursor is in relation to it. as far as i can tell thats not something that i can do with just css.</p>
 <p>pelican doesnt natively support javascript files so ill be using the <a href="https://github.com/pelican-plugins/webassets">webassets</a> plugin rather than pelican_javascript which seems to be deprecated.</p>
 <p>I'm realizing that pure css for text cant give me the embossed look i want, so its time to delve into the very scary world of svg... i'm not going to act like i fully understand whats going on but ive gotten this to work:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">&lt;svg</span><span class="w"> </span><span class="na">width=</span><span class="s">&quot;155px&quot;</span><span class="w"> </span><span class="na">height=</span><span class="s">&quot;45px&quot;</span><span class="w"> </span><span class="na">viewBox=</span><span class="s">&quot;0 0 155 30&quot;</span><span class="w"> </span><span class="na">version=</span><span class="s">&quot;1.1&quot;</span><span class="w"> </span><span class="na">xmlns=</span><span class="s">&quot;http://www.w3.org/2000/svg&quot;</span><span class="w"> </span><span class="na">xmlns:xlink=</span><span class="s">&quot;http://www.w3.org/1999/xlink&quot;</span><span class="nt">&gt;</span>
-
-<span class="w">    </span><span class="nt">&lt;defs&gt;</span>
-<span class="w">        </span><span class="nt">&lt;text</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;text&quot;</span><span class="w"> </span><span class="na">font-family=</span><span class="s">&quot;Helvetica-Bold, Helvetica&quot;</span><span class="w"> </span><span class="na">font-size=</span><span class="s">&quot;30&quot;</span><span class="w"> </span><span class="na">font-weight=</span><span class="s">&quot;bold&quot;</span><span class="w"> </span><span class="na">fill=</span><span class="s">&quot;#E4A547&quot;</span><span class="nt">&gt;</span>
-<span class="w">            </span><span class="nt">&lt;tspan</span><span class="w"> </span><span class="na">x=</span><span class="s">&quot;1&quot;</span><span class="w"> </span><span class="na">y=</span><span class="s">&quot;23&quot;</span><span class="nt">&gt;</span>violet<span class="w"> </span>lark<span class="nt">&lt;/tspan&gt;</span>
-<span class="w">        </span><span class="nt">&lt;/text&gt;</span>
-
-<span class="w">        </span><span class="nt">&lt;filter</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;innershadow&quot;</span><span class="w"> </span><span class="na">x=</span><span class="s">&quot;-50%&quot;</span><span class="w"> </span><span class="na">y=</span><span class="s">&quot;-50%&quot;</span><span class="w"> </span><span class="na">width=</span><span class="s">&quot;200%&quot;</span><span class="w"> </span><span class="na">height=</span><span class="s">&quot;200%&quot;</span><span class="nt">&gt;</span>
-<span class="w">            </span><span class="nt">&lt;feComponentTransfer</span><span class="w"> </span><span class="na">in=</span><span class="s">SourceAlpha</span><span class="nt">&gt;</span>
-<span class="w">                </span><span class="nt">&lt;feFuncA</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;table&quot;</span><span class="w"> </span><span class="na">tableValues=</span><span class="s">&quot;1 0&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
-<span class="w">            </span><span class="nt">&lt;/feComponentTransfer&gt;</span>
-
-<span class="w">            </span><span class="nt">&lt;feGaussianBlur</span><span class="w"> </span><span class="na">stdDeviation=</span><span class="s">&quot;1.5&quot;</span><span class="nt">/&gt;</span>
-<span class="w">            </span><span class="nt">&lt;feOffset</span><span class="w"> </span><span class="na">dx=</span><span class="s">&quot;0&quot;</span><span class="w"> </span><span class="na">dy=</span><span class="s">&quot;0&quot;</span><span class="w"> </span><span class="na">result=</span><span class="s">&quot;offsetblur&quot;</span><span class="nt">/&gt;</span>
-<span class="w">            </span><span class="nt">&lt;feFlood</span><span class="w"> </span><span class="na">flood-color=</span><span class="s">&quot;#7A500F&quot;</span><span class="w"> </span><span class="na">flood-opacity=</span><span class="s">&quot;.2&quot;</span><span class="w"> </span><span class="na">result=</span><span class="s">&quot;color&quot;</span><span class="nt">/&gt;</span>
-<span class="w">            </span><span class="nt">&lt;feComposite</span><span class="w"> </span><span class="na">in2=</span><span class="s">&quot;offsetblur&quot;</span><span class="w"> </span><span class="na">operator=</span><span class="s">&quot;in&quot;</span><span class="nt">/&gt;</span>
-<span class="w">            </span><span class="nt">&lt;feComposite</span><span class="w"> </span><span class="na">in2=</span><span class="s">&quot;SourceAlpha&quot;</span><span class="w"> </span><span class="na">operator=</span><span class="s">&quot;in&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
-<span class="w">        </span><span class="nt">&lt;/filter&gt;</span>
-
-<span class="w">        </span><span class="nt">&lt;filter</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;topshadow&quot;</span><span class="w"> </span><span class="na">x=</span><span class="s">&quot;-50%&quot;</span><span class="w"> </span><span class="na">y=</span><span class="s">&quot;-50%&quot;</span><span class="w"> </span><span class="na">width=</span><span class="s">&quot;200%&quot;</span><span class="w"> </span><span class="na">height=</span><span class="s">&quot;200%&quot;</span><span class="nt">&gt;</span>
-<span class="w">            </span><span class="nt">&lt;feComponentTransfer</span><span class="w"> </span><span class="na">in=</span><span class="s">SourceAlpha</span><span class="nt">&gt;</span>
-<span class="w">                </span><span class="nt">&lt;feFuncA</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;table&quot;</span><span class="w"> </span><span class="na">tableValues=</span><span class="s">&quot;1 0&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
-<span class="w">            </span><span class="nt">&lt;/feComponentTransfer&gt;</span>
-
-<span class="w">            </span><span class="nt">&lt;feGaussianBlur</span><span class="w"> </span><span class="na">stdDeviation=</span><span class="s">&quot;1&quot;</span><span class="nt">/&gt;</span>
-<span class="w">            </span><span class="nt">&lt;feOffset</span><span class="w"> </span><span class="na">dx=</span><span class="s">&quot;0&quot;</span><span class="w"> </span><span class="na">dy=</span><span class="s">&quot;1&quot;</span><span class="w"> </span><span class="na">result=</span><span class="s">&quot;offsetblur&quot;</span><span class="nt">/&gt;</span>
-<span class="w">            </span><span class="nt">&lt;feFlood</span><span class="w"> </span><span class="na">flood-color=</span><span class="s">&quot;#7A500F&quot;</span><span class="w"> </span><span class="na">flood-opacity=</span><span class="s">&quot;.4&quot;</span><span class="w"> </span><span class="na">result=</span><span class="s">&quot;color&quot;</span><span class="nt">/&gt;</span>
-<span class="w">            </span><span class="nt">&lt;feComposite</span><span class="w"> </span><span class="na">in2=</span><span class="s">&quot;offsetblur&quot;</span><span class="w"> </span><span class="na">operator=</span><span class="s">&quot;in&quot;</span><span class="nt">/&gt;</span>
-<span class="w">            </span><span class="nt">&lt;feComposite</span><span class="w"> </span><span class="na">in2=</span><span class="s">&quot;SourceAlpha&quot;</span><span class="w"> </span><span class="na">operator=</span><span class="s">&quot;in&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
-<span class="w">        </span><span class="nt">&lt;/filter&gt;</span>
-
-<span class="w">        </span><span class="nt">&lt;filter</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;innershine&quot;</span><span class="w"> </span><span class="na">x=</span><span class="s">&quot;-50%&quot;</span><span class="w"> </span><span class="na">y=</span><span class="s">&quot;-50%&quot;</span><span class="w"> </span><span class="na">width=</span><span class="s">&quot;200%&quot;</span><span class="w"> </span><span class="na">height=</span><span class="s">&quot;200%&quot;</span><span class="nt">&gt;</span>
-<span class="w">            </span><span class="nt">&lt;feComponentTransfer</span><span class="w"> </span><span class="na">in=</span><span class="s">SourceAlpha</span><span class="nt">&gt;</span>
-<span class="w">                </span><span class="nt">&lt;feFuncA</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;table&quot;</span><span class="w"> </span><span class="na">tableValues=</span><span class="s">&quot;1 0&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
-<span class="w">            </span><span class="nt">&lt;/feComponentTransfer&gt;</span>
-
-<span class="w">            </span><span class="nt">&lt;feGaussianBlur</span><span class="w"> </span><span class="na">stdDeviation=</span><span class="s">&quot;.75&quot;</span><span class="nt">/&gt;</span>
-<span class="w">            </span><span class="nt">&lt;feOffset</span><span class="w"> </span><span class="na">dx=</span><span class="s">&quot;0&quot;</span><span class="w"> </span><span class="na">dy=</span><span class="s">&quot;-1.5&quot;</span><span class="w"> </span><span class="na">result=</span><span class="s">&quot;offsetblur&quot;</span><span class="nt">/&gt;</span>
-<span class="w">            </span><span class="nt">&lt;feFlood</span><span class="w"> </span><span class="na">flood-color=</span><span class="s">&quot;#FFFFFF&quot;</span><span class="w"> </span><span class="na">flood-opacity=</span><span class="s">&quot;.40&quot;</span><span class="w"> </span><span class="na">result=</span><span class="s">&quot;color&quot;</span><span class="nt">/&gt;</span>
-<span class="w">            </span><span class="nt">&lt;feComposite</span><span class="w"> </span><span class="na">in2=</span><span class="s">&quot;offsetblur&quot;</span><span class="w"> </span><span class="na">operator=</span><span class="s">&quot;in&quot;</span><span class="nt">/&gt;</span>
-<span class="w">            </span><span class="nt">&lt;feComposite</span><span class="w"> </span><span class="na">in2=</span><span class="s">&quot;SourceAlpha&quot;</span><span class="w"> </span><span class="na">operator=</span><span class="s">&quot;in&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
-<span class="w">        </span><span class="nt">&lt;/filter&gt;</span>
-
-<span class="w">        </span><span class="nt">&lt;filter</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;paperShine&quot;</span><span class="nt">&gt;</span>
-<span class="w">            </span><span class="nt">&lt;feDropShadow</span><span class="w"> </span><span class="na">dx=</span><span class="s">&quot;0&quot;</span><span class="w"> </span><span class="na">dy=</span><span class="s">&quot;1&quot;</span><span class="w"> </span><span class="na">stdDeviation=</span><span class="s">&quot;1&quot;</span><span class="w"> </span><span class="na">flood-color=</span><span class="s">&quot;#FFFFFF&quot;</span><span class="w"> </span><span class="na">flood-opacity=</span><span class="s">&quot;.75&quot;</span><span class="nt">/&gt;</span>
-<span class="w">        </span><span class="nt">&lt;/filter&gt;</span>
-
-<span class="w">        </span><span class="nt">&lt;filter</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;paperShadow&quot;</span><span class="nt">&gt;</span>
-<span class="w">            </span><span class="nt">&lt;feDropShadow</span><span class="w"> </span><span class="na">dx=</span><span class="s">&quot;0&quot;</span><span class="w"> </span><span class="na">dy=</span><span class="s">&quot;-.25&quot;</span><span class="w"> </span><span class="na">stdDeviation=</span><span class="s">&quot;1&quot;</span><span class="w"> </span><span class="na">flood-color=</span><span class="s">&quot;#9B7575&quot;</span><span class="w"> </span><span class="na">flood-opacity=</span><span class="s">&quot;.75&quot;</span><span class="nt">/&gt;</span>
-<span class="w">        </span><span class="nt">&lt;/filter&gt;</span>
-
-<span class="w">    </span><span class="nt">&lt;/defs&gt;</span>
-<span class="w">    </span><span class="nt">&lt;g</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;Page-1&quot;</span><span class="w"> </span><span class="na">stroke=</span><span class="s">&quot;none&quot;</span><span class="w"> </span><span class="na">stroke-width=</span><span class="s">&quot;1&quot;</span><span class="w"> </span><span class="na">fill=</span><span class="s">&quot;none&quot;</span><span class="w"> </span><span class="na">fill-rule=</span><span class="s">&quot;evenodd&quot;</span><span class="w"> </span><span class="na">fill-opacity=</span><span class="s">&quot;1&quot;</span><span class="nt">&gt;</span>
-<span class="w">        </span><span class="nt">&lt;g</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;Violet-Lark-Copy&quot;</span><span class="w"> </span><span class="na">fill-rule=</span><span class="s">&quot;nonzero&quot;</span><span class="w"> </span><span class="na">fill=</span><span class="s">&quot;#E4A547&quot;</span><span class="nt">&gt;</span>
-
-<span class="w">            </span><span class="nt">&lt;use</span><span class="w"> </span><span class="na">filter=</span><span class="s">&quot;url(#paperShadow)&quot;</span><span class="w"> </span><span class="na">xlink:href=</span><span class="s">&quot;#text&quot;</span><span class="nt">&gt;&lt;/use&gt;</span>
-<span class="w">            </span><span class="nt">&lt;use</span><span class="w"> </span><span class="na">filter=</span><span class="s">&quot;url(#paperShine)&quot;</span><span class="w"> </span><span class="na">xlink:href=</span><span class="s">&quot;#text&quot;</span><span class="nt">&gt;&lt;/use&gt;</span>
-<span class="w">            </span><span class="nt">&lt;use</span><span class="w"> </span><span class="na">xlink:href=</span><span class="s">&quot;#text&quot;</span><span class="nt">&gt;&lt;/use&gt;</span>
-<span class="w">            </span><span class="nt">&lt;use</span><span class="w"> </span><span class="na">filter=</span><span class="s">&quot;url(#innershadow)&quot;</span><span class="w"> </span><span class="na">xlink:href=</span><span class="s">&quot;#text&quot;</span><span class="nt">&gt;&lt;/use&gt;</span>
-<span class="w">            </span><span class="nt">&lt;use</span><span class="w"> </span><span class="na">filter=</span><span class="s">&quot;url(#topshadow)&quot;</span><span class="w"> </span><span class="na">xlink:href=</span><span class="s">&quot;#text&quot;</span><span class="nt">&gt;&lt;/use&gt;</span>
-<span class="w">            </span><span class="nt">&lt;use</span><span class="w"> </span><span class="na">filter=</span><span class="s">&quot;url(#innershine)&quot;</span><span class="w"> </span><span class="na">xlink:href=</span><span class="s">&quot;#text&quot;</span><span class="nt">&gt;&lt;/use&gt;</span>
-<span class="w">            </span><span class="cm">&lt;!--</span>
-<span class="cm">            &lt;use filter=&quot;url(#paperShadow)&quot; xlink:href=&quot;#twitter&quot;&gt;&lt;/use&gt;</span>
-<span class="cm">            &lt;use filter=&quot;url(#paperShine)&quot; xlink:href=&quot;#twitter&quot;&gt;&lt;/use&gt;</span>
-<span class="cm">            &lt;use xlink:href=&quot;#twitter&quot;&gt;&lt;/use&gt;</span>
-<span class="cm">            &lt;use filter=&quot;url(#innershadow)&quot; xlink:href=&quot;#twitter&quot;&gt;&lt;/use&gt;</span>
-<span class="cm">            &lt;use filter=&quot;url(#topshadow)&quot; xlink:href=&quot;#twitter&quot;&gt;&lt;/use&gt;</span>
-<span class="cm">            &lt;use filter=&quot;url(#innershine)&quot; xlink:href=&quot;#twitter&quot;&gt;&lt;/use&gt;</span>
-<span class="cm">            --&gt;</span>
-<span class="w">        </span><span class="nt">&lt;/g&gt;</span>
-<span class="w">    </span><span class="nt">&lt;/g&gt;</span>
-<span class="nt">&lt;/svg&gt;</span>
-</code></pre></div>
-
 <h2>tangent</h2>
 <p>something interesting about the modern internet is how browsers are SOOO advanced. the amount of things you can do purely via html and css is mind boggling. so then... why does the internet feel so dead now? its too sleek and too 'perfect'. its obviously not about the technology!</p>
 <p>the web went from something that was only accessed by the biggest nerds ever to something that <strong><em>everyone</em></strong> uses. i know from working retail that the average person is very <em>very</em> dumb. knowing that it makes plenty of sense to converge on the most simplistic streamlined design ever. the bastardizeation of the web isnt all bad i have to admit, sites are way more accessible than ever before and thats obviously a great thing. </p>
+<p>i want to build a really nice toolkit NOW so that future me can write articles quickly and easily without having to fuss about with making things look the way they should</p>
       </div><!-- /.entry-content -->
       
 

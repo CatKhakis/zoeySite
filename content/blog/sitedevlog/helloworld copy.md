@@ -1,4 +1,4 @@
-Title: Hello World!
+Title: Hello World!2
 Category: Dev Log
 Date: 2025-7-11
 Day: 11
@@ -68,7 +68,4 @@ I'm realizing that pure css for text cant give me the embossed look i want, so i
 something interesting about the modern internet is how browsers are SOOO advanced. the amount of things you can do purely via html and css is mind boggling. so then... why does the internet feel so dead now? its too sleek and too 'perfect'. its obviously not about the technology!
 
 the web went from something that was only accessed by the biggest nerds ever to something that ***everyone*** uses. i know from working retail that the average person is very *very* dumb. knowing that it makes plenty of sense to converge on the most simplistic streamlined design ever. the bastardizeation of the web isnt all bad i have to admit, sites are way more accessible than ever before and thats obviously a great thing. 
-
-
-i want to build a really nice toolkit NOW so that future me can write articles quickly and easily without having to fuss about with making things look the way they should
 

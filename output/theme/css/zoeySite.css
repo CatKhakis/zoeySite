@@ -1,7 +1,4 @@
-.flexRow {
-    display: flex;
-    flex-direction: row;
-}
+
 
 #leftContent {
     flex-grow: 1;
@@ -12,7 +9,7 @@
 
 #centerContent {
 
-    width: 800px;
+    width: 900px;
 }
 
 #rightContent {
@@ -24,6 +21,9 @@
     height: 450px;
 
     pointer-events: auto;
+
+    visibility: collapse;
+    width: 0px;
 }
 
 #businessCard {
@@ -164,6 +164,8 @@
     gap: 1em;
 
     margin-bottom: 1em;
+
+    height: 65px;
 }
 
 #article_title div {
@@ -179,8 +181,10 @@
     
     padding: 0.5px;
     padding-left: 20px;
+}
 
-    
+#article_title.hidden .left {
+    padding-left: 0px;
 }
 
 #article_title .left * {
@@ -188,10 +192,63 @@
 }
 
 #article_title .right {
+    padding: 5px;
+
+    display: flex;
+    flex-direction: row;
+
+    gap: 3px;
+}
+#article_title .right p {
+    margin-top: 1px;
+    margin-bottom: 1px;
 }
 
-#article_title div .datacontainer {
+
+
+#article_title div.datacontainer {
     border-radius: 5px;
+
+    padding: 2px;
+    padding-left: 7px;
+    padding-right: 7px;
 }
 
+.flexRow {
+    display: flex;
 
+    flex-direction: row;
+    gap: 3px;
+}
+
+.flexColumn {
+    display: flex;
+
+    flex-direction: column;
+    gap: 3px;
+}
+
+.flexCenter {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.colordisplay div {
+    width: 35px;
+    height: 35px;
+    border-radius: 100%;
+
+    margin: 5px;
+    margin-right: 10px;
+}
+
+.colordisplay h5 {
+    align-self: center;
+    margin: 0;
+}
+
+#featured {
+    padding-top: 10px !important;
+}
