@@ -8,3 +8,22 @@
     <h5>{{ hex }} - {{ label }}</h5>
 </div>
 {%- endmacro %}
+
+{% macro polaroid(src, text, position, stack, size) -%}
+<div class="polaroid_stack {{ size }}">
+
+    {% if stack %}
+        <div class="polaroid" style="transform: rotate(-7.5deg); top: -3px; left: 0px;"></div>
+        <div class="polaroid" style="transform: rotate(10deg); top: 4px; left: 7px;"></div>
+    {% endif %}
+
+    <div class="polaroid">
+        <div class="polaroid_image">
+            <img src="{{ src }}" style="object-position:{{ position }};">
+        </div>
+        <div class="polaroid_text flexCenter">
+            <h2>{{ text }}</h2>
+        </div>
+    </div>
+</div>
+{%- endmacro %}

@@ -252,3 +252,125 @@
 #featured {
     padding-top: 10px !important;
 }
+
+
+
+
+
+.polaroid_stack {
+    position: relative;
+}
+
+.polaroid {
+    position: absolute;
+}
+
+.polaroid_image {
+    padding-bottom: 0;
+}
+
+.polaroid_text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.polaroid_image img {
+    object-fit: cover;
+}
+
+.polaroid_text * {
+    margin: 0;
+
+    font-family: 'Gaegu';
+    font-weight: bold;
+    font-style: normal;
+}
+
+
+
+
+
+
+
+.polaroid_stack.small {
+    width: 175px;
+    height: 210px;
+    margin: 18px;
+}
+
+.polaroid_stack.small .polaroid {
+    width: 175px;
+    height: 210px;
+}
+
+.polaroid_stack.small .polaroid_image {
+    padding: 10px;
+}
+
+.polaroid_stack.small .polaroid_text {
+    height: 45px;
+}
+
+.polaroid_stack.small .polaroid_image img {
+    width: 155px;
+    height: 155px;
+}
+
+
+
+
+.polaroid_stack.medium {
+    width: 262.5px;
+    height: 315px;
+    margin: 26.25px;
+}
+
+.polaroid_stack.medium .polaroid {
+    width: 262.5px;
+    height: 315px;
+}
+
+.polaroid_stack.medium .polaroid_image {
+    padding: 15px;
+}
+
+.polaroid_stack.medium .polaroid_text {
+    height: 67.5px;
+}
+
+.polaroid_stack.medium .polaroid_image img {
+    width: 232.5px;
+    height: 232.5px;
+}
+
+
+
+
+
+
+
+.polaroid_stack.large {
+    width: 350px;
+    height: 420px;
+    margin: 35px;
+}
+
+.polaroid_stack.large .polaroid {
+    width: 350px;
+    height: 420px;
+}
+
+.polaroid_stack.large .polaroid_image {
+    padding: 20px;
+}
+
+.polaroid_stack.large .polaroid_text {
+    height: 90px;
+}
+
+.polaroid_stack.large .polaroid_image img {
+    width: 310px;
+    height: 310px;
+}

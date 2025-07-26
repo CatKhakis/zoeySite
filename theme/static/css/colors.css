@@ -93,6 +93,7 @@ body {
 
 
 
+
 #businessCard {
     background-color: var(--text);
     box-shadow: inset 2px 2px 3px var(--overlay2), inset -2px -2px 3px var(--surface2);
@@ -140,4 +141,17 @@ a:hover, a:active {
 
 .entry-title a:link, .entry-title a:visited {
     color: var(--ctp-latte-yellow);
+}
+
+.polaroid {
+    background-color: var(--ctp-latte-base);
+    filter: drop-shadow(0px 4px 15px rgb(from color-mix(in hsl, hsl(from var(--ctp-latte-base) h s l), black 70%) r g b / 30%));
+}
+
+.polaroid_image img {
+    background-color: var(--ctp-macchiato-crust);
+}
+
+.polaroid_text * {
+    color: var(--ctp-latte-text);
 }
