@@ -5,6 +5,8 @@ Day: 11
 Month: July
 Year: 2025
 
+{% from 'macros.html' import clean_break %}
+
 ### What could be a more fitting hello world than a dev log documenting making this very site?
 
 orignally i had intended on using Ghost for blogging purposes but it was far too 'polished' for me. i wanted something that i could really make my own rather than something that looks nice by default. i have been very inspired by [eevee's site](https://eev.ee) that she recently redesigned at the time of writing this. her blog post [Fresh start](https://eev.ee/blog/2024/12/03/fresh-start/) details her feelings about the blog itself and the direction she wants to take it. she gave her reasoning for opting to use pelican as the backbone for the site and since i trust her knowledge and enjoy the design of it i thought i might as well follow her paw prints and go the same route.
@@ -12,7 +14,6 @@ orignally i had intended on using Ghost for blogging purposes but it was far too
 i'd like to outline my goals and methodology in this first post and will update links to future posts about developing specific features.
 Dillan Stock of The Stock Pot on Youtube posted [this fantastic video](https://youtu.be/3zfIUSg9lm4?si=EwVH8olMrU9eg_5c) discussing his goals for his smart home and i find his thought process absolutely genius. i highly reccomend his channel- nothing but the best content, especially if you're interesting in smart home automation in the slightest. he breaks it down into what he actually *wants* rather than being influenced by what flashy smart home gadgets exist out there. finding specific devices is about what fits your desires, not picking up the cool devices and trying to force your desires to fit that product. this is why Ghost wasnt the right pick for this site. yes- its a good product as far as i can tell but its not primarily addressing what i want out of a blog. its the flashy smart home device that i could learn, but i'd be tackling it the wrong way. 
 
-{% from 'macros.html' import clean_break %}
 {{ clean_break() }}
 
 ### i want this site to
@@ -27,6 +28,7 @@ Dillan Stock of The Stock Pot on Youtube posted [this fantastic video](https://y
 
 i'm so excited to get to make my own place on the internet. i've been wanting to make a blog for the longest time, but im a very busy puppy and starting is always the hardest part. i'll probably write a more indepth analysis but i really believe that more critters should focus on blogs rather than social media. social media is great in a lot of ways but i think its eroded a lot of *intentionality*. i'll expand on this when i write about ipods, physical photos, and my friend's amazing idea for bringing physical media back in the modern era.
 
+{{ clean_break() }}
 # pelican
 
 wow. this is a lot. 

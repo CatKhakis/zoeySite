@@ -1,4 +1,7 @@
-
+html, body {
+  margin: 0;
+  height: 100%;
+}
 
 #leftContent {
     flex-grow: 1;
@@ -9,7 +12,8 @@
 
 #centerContent {
 
-    width: 900px;
+    min-width: 800px;
+    max-width: 1200px;
 }
 
 #rightContent {
@@ -263,6 +267,12 @@
 
 .polaroid {
     position: absolute;
+    transition: 0.2s;
+}
+
+.polaroid:hover {
+    transition: 0.2s;
+    transform: rotate(2deg);
 }
 
 .polaroid_image {
@@ -297,7 +307,7 @@
 .polaroid_stack.small {
     width: 175px;
     height: 210px;
-    margin: 18px;
+    margin: 30px;
 }
 
 .polaroid_stack.small .polaroid {
@@ -324,7 +334,7 @@
 .polaroid_stack.medium {
     width: 262.5px;
     height: 315px;
-    margin: 26.25px;
+    margin: 30px;
 }
 
 .polaroid_stack.medium .polaroid {
@@ -354,7 +364,7 @@
 .polaroid_stack.large {
     width: 350px;
     height: 420px;
-    margin: 35px;
+    margin: 40px;
 }
 
 .polaroid_stack.large .polaroid {
@@ -373,4 +383,28 @@
 .polaroid_stack.large .polaroid_image img {
     width: 310px;
     height: 310px;
+}
+
+
+
+#contentinfo {
+    padding-bottom: 0em; text-align: right;
+}
+
+
+
+/*
+	About
+*****************/
+#about {
+    font-style: normal;
+    margin-bottom: 0em;
+    overflow: hidden;
+    padding: 20px;
+    text-align: left;
+    max-width: 1200px;
+
+    bottom: 0;
+
+    border-radius: 10px 10px 0 0;
 }

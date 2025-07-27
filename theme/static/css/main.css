@@ -10,7 +10,6 @@
 
 /* Imports */
 @import url("reset.css");
-@import url("pygment.css");
 @import url("typogrify.css");
 @import url("fonts.css");
 
@@ -263,7 +262,7 @@ div.figure p.caption, figure p.caption { /* margin provided by figure */
 	Body
 *****************/
 #content {
-    margin-bottom: 2em;
+    margin-bottom: 1em;
     overflow: hidden;
     padding: 20px 20px;
     max-width: 810px;
@@ -311,23 +310,6 @@ div.figure p.caption, figure p.caption { /* margin provided by figure */
     max-width: 175px;
 }
 
-/*
-	About
-*****************/
-#about {
-    background: #fff;
-    font-style: normal;
-    margin-bottom: 2em;
-    overflow: hidden;
-    padding: 20px;
-    text-align: left;
-    max-width: 760px;
-
-    border-radius: 10px;
-    -moz-border-radius: 10px;
-    -webkit-border-radius: 10px;
-}
-
 #about .primary {float: left; max-width: 165px;}
 #about .primary strong {color: #C64350; display: block; font-size: 1.286em;}
 #about .photo {float: left; margin: 5px 20px;}
@@ -336,10 +318,6 @@ div.figure p.caption, figure p.caption { /* margin provided by figure */
 
 #about .bio {float: right; max-width: 500px;}
 
-/*
-	Footer
-*****************/
-#contentinfo {padding-bottom: 2em; text-align: right;}
 
 /***** Sections *****/
 /* Blog */
@@ -374,28 +352,6 @@ li:first-child .hentry, #content > .hentry {border: 0; margin: 0;}
     top: 0.5em;
     max-width: 190px;
 }
-
-	/* About the Author */
-#about-author {
-    background: #f9f9f9;
-    clear: both;
-    font-style: normal;
-    margin: 2em 0;
-    padding: 10px 20px 15px 20px;
-
-    border-radius: 5px;
-    -moz-border-radius: 5px;
-    -webkit-border-radius: 5px;
-}
-
-#about-author strong {
-    color: #C64350;
-    clear: both;
-    display: block;
-    font-size: 1.429em;
-}
-
-#about-author .photo {border: 1px solid #ddd; float: left; margin: 5px 1em 0 0;}
 
 	/* Comments */
 #comments-list {list-style: none; margin: 0 1em;}

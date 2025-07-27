@@ -91,7 +91,11 @@ body {
 }
 
 
-
+#about {
+    background: var(--base);
+    box-shadow: 
+    inset 0px 1px 3px color-mix(in hsl, hsl(from var(--base) h s l), white 20%);
+}
 
 
 #businessCard {
@@ -112,7 +116,6 @@ body {
 #shadeSelector div:hover {
     outline: solid 3px var(--red);
 }
-
 
 
 
@@ -145,8 +148,20 @@ a:hover, a:active {
 
 .polaroid {
     background-color: var(--ctp-latte-base);
+}
+
+.polaroid_stack.large .polaroid {
     filter: drop-shadow(0px 4px 15px rgb(from color-mix(in hsl, hsl(from var(--ctp-latte-base) h s l), black 70%) r g b / 30%));
 }
+
+.polaroid_stack.medium .polaroid {
+    filter: drop-shadow(0px 4px 10px rgb(from color-mix(in hsl, hsl(from var(--ctp-latte-base) h s l), black 70%) r g b / 30%));
+}
+
+.polaroid_stack.small .polaroid {
+    filter: drop-shadow(0px 4px 5px rgb(from color-mix(in hsl, hsl(from var(--ctp-latte-base) h s l), black 70%) r g b / 30%));
+}
+
 
 .polaroid_image img {
     background-color: var(--ctp-macchiato-crust);

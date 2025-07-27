@@ -1,10 +1,12 @@
 {% macro clean_break() -%}
-<div>[page break should go here]</div>
+    </div>
+</section><section id="content" class="body">
+    <div class="entry-content" markdown="1">
 {%- endmacro %}
 
 {% macro color(hex, label) -%}
 <div class="colordisplay flexRow">
-    <div style="background-color:{{ hex }};"></div>
+    <div style="background-color: {{ hex }};"></div>
     <h5>{{ hex }} - {{ label }}</h5>
 </div>
 {%- endmacro %}
@@ -19,7 +21,7 @@
 
     <div class="polaroid">
         <div class="polaroid_image">
-            <img src="{{ src }}" style="object-position:{{ position }};">
+            <img src="{{ src }}" style="object-position: {{ position }};">
         </div>
         <div class="polaroid_text flexCenter">
             <h2>{{ text }}</h2>
