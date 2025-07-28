@@ -1,8 +1,11 @@
 {% macro clean_break() -%}
+        </p>
     </div>
-</section><section id="content" class="body">
-    <div class="entry-content" markdown="1">
+</section><section class="content_section">
+    <div class="section-item body" markdown="1">
+        <p>
 {%- endmacro %}
+
 
 {% macro color(hex, label) -%}
 <div class="colordisplay flexRow">
@@ -10,6 +13,7 @@
     <h5>{{ hex }} - {{ label }}</h5>
 </div>
 {%- endmacro %}
+
 
 {% macro polaroid(src, text, position, stack, size) -%}
 <div class="polaroid_stack {{ size }}">

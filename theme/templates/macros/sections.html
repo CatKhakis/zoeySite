@@ -1,0 +1,27 @@
+{% macro sectionStart() -%}
+        </p>
+    </div>
+</section><section class="content_section">
+    <p>
+{%- endmacro %}
+
+{% macro sectionEnd() -%}
+    </p>
+</section><section class="content_section">
+    <div class="section-item body" markdown="1">
+        <p>
+{%- endmacro %}
+
+
+
+
+
+
+
+{% macro body(input) -%}
+    <div class="section-item body" markdown="1">{{ input }}</div>
+{%- endmacro %}
+
+{% macro side(input) -%}
+    <div class="section-item side" markdown="1">{{ input }}</div>
+{%- endmacro %}

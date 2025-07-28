@@ -34,7 +34,6 @@
 <body id="index" class="home flexRow">
 
 	<div id="leftContent">
-		{% include 'businesscard.html' %}
 	</div>
 
 	<div id="centerContent">
@@ -77,6 +76,8 @@
 			<div class="macchiato">{{ lucide("moon") }}</div>
 			<div class="mocha">{{ lucide("moon-star") }}</div>
 		</div>
+
+		{% include 'businesscard.html' %}
 	</div>
 
 	{% assets filters="rjsmin", output="js/packed.js", "js/*.js" %}

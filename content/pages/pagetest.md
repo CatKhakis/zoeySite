@@ -7,6 +7,8 @@ Year: 2025
 
 {% from 'macros.html' import polaroid, clean_break %}
 
+{% from 'macros/sections.html' import sectionStart, sectionEnd, body, side %}
+
 
 
 <div class="flexRow">
@@ -25,3 +27,50 @@ Year: 2025
 # after
 
 home > dev logs > ipod classic datamining
+
+
+
+
+
+
+{{ sectionStart() }}
+
+{{ body('
+
+test
+
+# test
+
+') }}
+
+{{ polaroid("/images/conventions/AC25/IMG_6153.jpeg", "convention pics", "left", false, "large") }}
+
+{{ sectionEnd() }}
+
+lah lah lah
+
+[//]: # (This may be the most platform independent comment)
+
+
+{{ sectionStart() }}
+
+{{ side('
+
+test
+
+# test
+
+') }}
+
+{{ body('
+
+test
+
+# test
+
+') }}
+
+{{ sectionEnd() }}
+
+
+awawaw

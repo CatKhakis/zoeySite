@@ -1,24 +1,4 @@
-html, body {
-  margin: 0;
-  height: 100%;
-}
 
-#leftContent {
-    flex-grow: 1;
-
-    display: flex;
-    justify-content: center;
-}
-
-#centerContent {
-
-    min-width: 800px;
-    max-width: 1200px;
-}
-
-#rightContent {
-    flex-grow: 1;
-}
 
 #cardHolder {
     width: 300px;
@@ -158,64 +138,6 @@ html, body {
 
 .mocha.selectedShade {
     margin-top: 2.5px;
-}
-
-
-
-#article_title {
-    display: flex;
-
-    gap: 1em;
-
-    margin-bottom: 1em;
-
-    height: 65px;
-}
-
-#article_title div {
-    border-radius: 10px;
-}
-
-#article_title .left {
-    flex-grow: 2;
-
-    display: flex;
-    justify-content: left;
-    align-items: center;
-    
-    padding: 0.5px;
-    padding-left: 20px;
-}
-
-#article_title.hidden .left {
-    padding-left: 0px;
-}
-
-#article_title .left * {
-    margin-bottom: 0px;
-}
-
-#article_title .right {
-    padding: 5px;
-
-    display: flex;
-    flex-direction: row;
-
-    gap: 3px;
-}
-#article_title .right p {
-    margin-top: 1px;
-    margin-bottom: 1px;
-}
-
-
-
-#article_title div.datacontainer {
-    border-radius: 5px;
-
-    padding: 2px;
-    padding-left: 7px;
-    padding-right: 7px;
 }
 
 .flexRow {
@@ -407,4 +329,8 @@ html, body {
     bottom: 0;
 
     border-radius: 10px 10px 0 0;
+}
+
+#banner {
+    width: 1200px;
 }

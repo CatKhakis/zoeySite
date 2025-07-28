@@ -1,0 +1,41 @@
+{% macro content_title(article, independent, type) -%}
+
+	{% if independent == true %}
+	<section id="titlebar">
+	{% else %}
+	<section id="titlebar" class="hidden">
+	{% endif %}
+
+		<div class="left">
+			<h1 class="entry-title">
+				<a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark"
+					title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a>
+			</h1>
+		</div>
+
+		<div class="right">
+
+			{% if type == "article" %}
+			<div class="flexColumn invisibleDiv">
+				<div class="flexRow invisibleDiv">
+					<div class="datacontainer flexCenter" title="{{ article.date.isoformat() }}">
+						{{ article.month }}
+					</div>
+					<div class="datacontainer flexCenter">
+						{{ article.day }}
+					</div>
+				</div>
+
+				<div class="datacontainer flexCenter">
+					{{ article.year }}
+				</div>
+			</div>
+			{% endif %}
+
+			<div class="flexCenter">
+				[tags placeholder]
+			</div>
+		</div>
+
+	</section>
+{%- endmacro %}

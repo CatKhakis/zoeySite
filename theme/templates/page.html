@@ -12,13 +12,15 @@
 
 {% block content %}
 
-{% include 'page_title.html' %}
+{% from 'macros/titlebar.html' import content_title %}
+{{ content_title(page, true, "page") }}
 
-  <section id="content" class="body">
-    <div class="entry-content">
-      
-      {{ page.content }}
-    </div><!-- /.entry-content -->
-      
-  </section>
+  <page id="content" class="body">
+    <section class="content_section">
+      <div class="section-item body">
+        
+        {{ page.content }}
+      </div><!-- /.entry-content -->
+    </section>
+  </page>
 {% endblock %}
