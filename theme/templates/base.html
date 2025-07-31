@@ -9,11 +9,7 @@
 	<meta name="generator" content="Pelican" />
 	<title>{% block title %}{{ SITENAME|striptags }}{%endblock%}</title>
 
-	<link rel="stylesheet" href="/{{ THEME_STATIC_DIR }}/css/{{ CSS_FILE }}" />
-
-	<!-- {% assets filters="cssmin", output="css/style.min.css", "css/*.css" %}
-		<link rel="stylesheet" href="{{SITEURL}}/{{ASSET_URL}}">
-	{% endassets %} -->
+	<link rel="stylesheet" href="./{{ THEME_STATIC_DIR }}/css/{{ CSS_FILE }}" />
 
 	{% if FEED_ALL_ATOM %}
 	<link
@@ -79,7 +75,7 @@
 	</div>
 
 	{% assets filters="rjsmin", output="js/packed.js", "js/*.js" %}
-		<script src="/{{ASSET_URL}}"></script>
+		<script src="./{{ASSET_URL}}"></script>
 	{% endassets %}
 </body>
 
