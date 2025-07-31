@@ -3,6 +3,7 @@ SITENAME = 'zoeySite'
 SITEURL = ""
 
 THEME = 'theme'
+THEME_STATIC_DIR = 'theme'
 
 PATH = "content"
 ARTICLE_PATHS = ['blog']
@@ -15,6 +16,11 @@ DEFAULT_LANG = 'en'
 
 from lucide.jinja import lucide
 JINJA_GLOBALS = {"lucide": lucide}
+
+WEBASSETS_CONFIG = [
+    ("CLOSURE_COMPRESSOR_PATH", "lib/closure/closure.jar"),
+    ("closure_compressor_optimization", "WHITESPACE_ONLY")
+]
 
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None

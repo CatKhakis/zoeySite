@@ -36,6 +36,7 @@ function updateTone() {
     currentTone = root.classList[0];
 
     rootRules = getStylesheet("colors.css").cssRules[0].style;
+    // rootRules = getStylesheet().style;
     
     for (let i = 0; i < rootRules.length; i++) {
 
@@ -43,6 +44,7 @@ function updateTone() {
         rootRules.setProperty(propertyName, `var(--ctp-${currentTone}${propertyName.replace('--', '-')})`);
     }
 }
+
 
 function getStylesheet(href) {
     for (const element of document.styleSheets[0].cssRules) {
@@ -52,3 +54,15 @@ function getStylesheet(href) {
     }
     return null;
 }
+
+// function getStylesheet() {
+//     for (const element of document.styleSheets[0].cssRules) {
+
+//         if (element.selectorText === ":root") {
+//             if (element.style[0] === "--text") {
+//                 return element;
+//             }
+//         }
+//     }
+//     return null;
+// }
