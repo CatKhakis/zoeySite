@@ -35,8 +35,8 @@ shadeSelector.addEventListener("mouseleave", (event) => {
 function updateTone() {
     currentTone = root.classList[0];
 
-    rootRules = getStylesheet("colors.css").cssRules[0].style;
-    // rootRules = getStylesheet().style;
+    // rootRules = getStylesheet("colors.css").cssRules[0].style;
+    rootRules = getStylesheet().style;
     
     for (let i = 0; i < rootRules.length; i++) {
 
@@ -46,23 +46,23 @@ function updateTone() {
 }
 
 
-function getStylesheet(href) {
-    for (const element of document.styleSheets[0].cssRules) {
-        if (href === element.href) {
-            return element.styleSheet;
-        }
-    }
-    return null;
-}
-
-// function getStylesheet() {
+// function getStylesheet(href) {
 //     for (const element of document.styleSheets[0].cssRules) {
-
-//         if (element.selectorText === ":root") {
-//             if (element.style[0] === "--text") {
-//                 return element;
-//             }
+//         if (href === element.href) {
+//             return element.styleSheet;
 //         }
 //     }
 //     return null;
 // }
+
+function getStylesheet() {
+    for (const element of document.styleSheets[0].cssRules) {
+
+        if (element.selectorText === ":root") {
+            if (element.style[0] === "--text") {
+                return element;
+            }
+        }
+    }
+    return null;
+}
