@@ -13,3 +13,4 @@ jobs:
     with:
       settings: "publishconf.py"
       requirements: "pelican[markdown] typogrify lucide"
+      theme: "theme"
