@@ -12,5 +12,4 @@ jobs:
       id-token: "write"
     with:
       settings: "publishconf.py"
-      requirements: "pelican[markdown] typogrify lucide"
-      theme: "theme"
+      requirements: "pelican[markdown] typogrify lucide pelican-webassets"
