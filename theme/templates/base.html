@@ -9,7 +9,7 @@
 	<meta name="generator" content="Pelican" />
 	<title>{% block title %}{{ SITENAME|striptags }}{%endblock%}</title>
 
-	<link rel="stylesheet" href=".{{ THEME_STATIC_DIR }}/css/{{ CSS_FILE }}" />
+	<link rel="stylesheet" href="{{ THEME_STATIC_DIR }}/css/{{ CSS_FILE }}" />
 
 	{% if FEED_ALL_ATOM %}
 	<link

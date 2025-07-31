@@ -3,7 +3,6 @@ SITENAME = 'zoeySite'
 SITEURL = ""
 
 THEME = 'theme'
-THEME_STATIC_DIR = 'theme'
 
 PATH = "content"
 ARTICLE_PATHS = ['blog']
