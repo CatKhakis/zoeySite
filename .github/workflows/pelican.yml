@@ -12,4 +12,4 @@ jobs:
       id-token: "write"
     with:
       settings: "publishconf.py"
-      requirements: "pelican[markdown] typogrify lucide pelican-webassets cssmin rjsmin"
+      requirements: "pelican[markdown] typogrify lucide pelican-webassets cssmin rjsmin pelican-jinja2content"
