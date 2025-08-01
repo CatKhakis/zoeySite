@@ -13,9 +13,9 @@ Year: 2025
 
 <div class="flexRow">
 
-{{ polaroid("/images/zoey/xxangelgutzxx.png", "zoey art", "30% 50%", true, "small") }}
+{{ polaroid("images/zoey/xxangelgutzxx.png", "zoey art", "30% 50%", true, "small") }}
 
-{{ polaroid("/images/conventions/AC25/IMG_6153.jpeg", "convention pics", "left", true, "small") }}
+{{ polaroid("images/conventions/AC25/IMG_6153.jpeg", "convention pics", "left", true, "small") }}
 
 </div>
 
@@ -43,7 +43,7 @@ test
 
 ') }}
 
-{{ polaroid("/images/conventions/AC25/IMG_6153.jpeg", "convention pics", "left", false, "large") }}
+{{ polaroid("images/conventions/AC25/IMG_6153.jpeg", "convention pics", "left", false, "large") }}
 
 {{ sectionEnd() }}
 
