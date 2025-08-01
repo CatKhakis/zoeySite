@@ -11,9 +11,21 @@
 
 	<!-- <link rel="stylesheet" href="{{ THEME_STATIC_DIR }}/css/{{ CSS_FILE }}" /> -->
 
-	{% assets filters="cssmin", output="css/style.min.css", "css/*.css" %}
+	{% assets filters="cssmin", output="css/reset.css", "css/reset.css" %}
 		<link rel="stylesheet" href="{{SITEURL}}/{{ASSET_URL}}">
 	{% endassets %}
+
+	{% assets filters="cssmin", output="css/main.css", "css/main.css" %}
+		<link rel="stylesheet" href="{{SITEURL}}/{{ASSET_URL}}">
+	{% endassets %}
+
+	{% assets 'colors' %}
+		<link rel="stylesheet" href="{{SITEURL}}/{{ASSET_URL}}">
+	{% endassets %}
+
+	<!-- {% assets filters="cssmin", output="css/style.min.css", "css/*.css" %}
+		<link rel="stylesheet" href="{{SITEURL}}/{{ASSET_URL}}">
+	{% endassets %} -->
 
 
 	{% if FEED_ALL_ATOM %}
@@ -80,7 +92,7 @@
 	</div>
 
 	{% assets filters="rjsmin", output="js/packed.js", "js/*.js" %}
-		<script src="./{{ASSET_URL}}"></script>
+		<script src="/{{ASSET_URL}}"></script>
 	{% endassets %}
 </body>
 

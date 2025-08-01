@@ -21,6 +21,17 @@ WEBASSETS_CONFIG = [
     ("closure_compressor_optimization", "WHITESPACE_ONLY")
 ]
 
+WEBASSETS_BUNDLES = (
+    # ("maincss", ("css/main.css", "css/layout.css", "css/fonts.css", "css/zoeySite.css"),
+    # {"output": "css/style.min.css", "filters": ["cssmin"]}),
+
+    # ("reset", ("css/reset.css"),
+    # {"output": "reset.css", "filters": ["cssmin"]}),
+
+    ("colors", ("css/colors.css", "css/catppuccin.css"),
+    {"output": "css/colors.min.css", "filters": ["cssmin"]}),
+)
+
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None
 CATEGORY_FEED_ATOM = None

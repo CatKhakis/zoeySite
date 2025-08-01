@@ -56,11 +56,16 @@ function updateTone() {
 // }
 
 function getStylesheet() {
-    for (const element of document.styleSheets[0].cssRules) {
+    for (const sheet of document.styleSheets) {
 
-        if (element.selectorText === ":root") {
-            if (element.style[0] === "--text") {
-                return element;
+        for (const element of sheet.cssRules) {
+            
+            if (element.selectorText === ":root") {
+
+                if (element.style[0] === "--text") {
+                    
+                    return element;
+                }
             }
         }
     }
