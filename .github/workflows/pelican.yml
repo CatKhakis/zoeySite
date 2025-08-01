@@ -1,7 +1,6 @@
 name: Deploy to GitHub Pages
 on:
   push:
-    siteurl: "https://catkhakis.github.io/zoeySite/"
     branches: ["main"]
   workflow_dispatch:
 jobs:
