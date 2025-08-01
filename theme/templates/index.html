@@ -9,8 +9,9 @@
         {# First item #}
             {% if loop.first and not articles_page.has_previous() %}
                 <aside id="featured" class="body">
-                    {% from 'macros/titlebar.html' import content_title %}
-                    {{ content_title(article, false) }}
+                    <h1 class="entry-title">
+                        <a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a>
+                    </h1>
                     <article>
                         <!-- <h1 class="entry-title"><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h1> -->
                         {{ article.summary }}
