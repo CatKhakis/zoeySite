@@ -1,5 +1,19 @@
 output/
+output/*
 
 __pycache__/
 
 .DS_Store
+output/archives.html
+output/authors.html
+output/categories.html
+output/index.html
+output/tags.html
+output/2025/arf-arf.html
+output/2025/hello-world.html
+output/author/zoey.html
+output/category/dev-log.html
+output/category/sitedevlog.html
+output/pages/pagetest.html
+output/pages/title.html
+output/pages/zoeys-refsheet.html

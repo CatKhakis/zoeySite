@@ -6,9 +6,11 @@
 	<section id="titlebar" class="hidden">
 	{% endif %}
 
+	<div>{{SITEURL}}</div>
+
 		<div class="left">
 			<h1 class="entry-title">
-				<a href="{{SITEURL}}/{{ article.url }}" rel="bookmark"
+				<a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark"
 					title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a>
 			</h1>
 		</div>

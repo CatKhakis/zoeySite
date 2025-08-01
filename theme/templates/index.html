@@ -9,6 +9,7 @@
         {# First item #}
             {% if loop.first and not articles_page.has_previous() %}
                 <aside id="featured" class="body">
+                    <div>{{ SITEURL }}</div>
                     {% from 'macros/titlebar.html' import content_title %}
                     {{ content_title(article, false) }}
                     <article>

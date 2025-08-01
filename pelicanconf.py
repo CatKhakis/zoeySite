@@ -1,6 +1,6 @@
 AUTHOR = 'zoey'
 SITENAME = 'zoeySite'
-SITEURL = "test"
+SITEURL = ""
 
 THEME = 'theme'
 

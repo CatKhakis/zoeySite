@@ -10,13 +10,13 @@
 
 	<!-- <link rel="stylesheet" href="theme/css/main.css" /> -->
 
-		<link rel="stylesheet" href="test/theme/css/reset.css?b50cc9c4">
+		<link rel="stylesheet" href="/theme/css/reset.css?b50cc9c4">
 
-		<link rel="stylesheet" href="test/theme/css/main.css?37d18a94">
+		<link rel="stylesheet" href="/theme/css/main.css?37d18a94">
 
-		<link rel="stylesheet" href="test/theme/css/colors.min.css?c01819a7">
+		<link rel="stylesheet" href="/theme/css/colors.min.css?c01819a7">
 
-	<!-- 		<link rel="stylesheet" href="test/theme/css/style.min.css?f29b95ea">
+	<!-- 		<link rel="stylesheet" href="/theme/css/style.min.css?f29b95ea">
  -->
 
 
@@ -31,18 +31,20 @@
 	<div id="centerContent">
 
 		<header id="banner" class="body">
-			<h1><a href="test/">zoeySite</a></h1>
+			<h1><a href="/">zoeySite</a></h1>
 			<nav>
 				<ul>
-					<li><a href="test/pages/pagetest.html">pagetest</a></li>
-					<li><a href="test/pages/zoeys-refsheet.html">Zoey's Refsheet</a></li>
-						<li class="active" ><a href="test/category/dev-log.html">Dev Log × 1</a></li> 
-						<li><a href="test/category/sitedevlog.html">sitedevlog × 1</a></li> 
+					<li><a href="/pages/pagetest.html">pagetest</a></li>
+					<li><a href="/pages/zoeys-refsheet.html">Zoey's Refsheet</a></li>
+						<li class="active" ><a href="/category/dev-log.html">Dev Log × 1</a></li> 
+						<li><a href="/category/sitedevlog.html">sitedevlog × 1</a></li> 
 				</ul>
 			</nav>
 		</header><!-- /#banner -->
 
 	<section id="titlebar">
+
+	<div></div>
 
 		<div class="left">
 			<h1 class="entry-title">
@@ -118,7 +120,7 @@ i'd like to have fun little interactable javascript elements, but the core of th
 <h2>business card 'header'</h2>
 <p>whats funny is that you can see this element right now! even though i havent designed it yet as of writing this!</p>
 <p>i've mocked up this concept for a business card that can sit on the left side of the site which can have a link to all my socials on the back. i'd like it to flip over with a nice 3d effect when its clicked but show the front side otherwise. i <em>think</em> this can be implemented with just css, but we will have to see if thats really possible.</p>
-<p><img alt="Photo" src="test/2025/card_mockup.png"></p>
+<p><img alt="Photo" src="/2025/card_mockup.png"></p>
 <p>from digging into it this absolutely could be done with pure css. BUT it would not be dyanmic at all and would only be able to be a toggle. I'd like the card to "lift" a corner based on where the cursor is in relation to it. as far as i can tell thats not something that i can do with just css.</p>
 <p>pelican doesnt natively support javascript files so ill be using the <a href="https://github.com/pelican-plugins/webassets">webassets</a> plugin rather than pelican_javascript which seems to be deprecated.</p>
 <p>I'm realizing that pure css for text cant give me the embossed look i want, so its time to delve into the very scary world of svg... i'm not going to act like i fully understand whats going on but ive gotten this to work:</p>
@@ -266,7 +268,7 @@ i'd like to have fun little interactable javascript elements, but the core of th
     </div>
 </div>	</div>
 
-		<script src="test/theme/js/packed.js?ebe8b3d6"></script>
+		<script src="/theme/js/packed.js?ebe8b3d6"></script>
 </body>
 
 </html>
