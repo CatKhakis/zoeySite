@@ -1,4 +1,4 @@
-{% macro content_title(pageurl, article, independent, type) -%}
+{% macro content_title(article, independent, type) -%}
 
 	{% if independent == true %}
 	<section id="titlebar">
@@ -6,11 +6,11 @@
 	<section id="titlebar" class="hidden">
 	{% endif %}
 
-	<div>{{pageurl}}</div>
+	<div>{{ SITEURL }}</div>
 
 		<div class="left">
 			<h1 class="entry-title">
-				<a href="{{ pageurl }}/{{ article.url }}" rel="bookmark"
+				<a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark"
 					title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a>
 			</h1>
 		</div>
