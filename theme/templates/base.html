@@ -92,7 +92,7 @@
 	</div>
 
 	{% assets filters="rjsmin", output="js/packed.js", "js/*.js" %}
-		<script src="/{{ASSET_URL}}"></script>
+		<script src="{{SITEURL}}/{{ASSET_URL}}"></script>
 	{% endassets %}
 </body>
 
