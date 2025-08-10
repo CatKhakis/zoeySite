@@ -1,5 +1,5 @@
-Title: Hello World!
-Category: Dev Log
+Title: Hello World! (draft)
+Category: devlog
 Date: 2025-7-11
 Day: 11
 Month: July
@@ -7,7 +7,38 @@ Year: 2025
 
 {% from 'macros.html' import clean_break %}
 
-### What could be a more fitting hello world than a dev log documenting making this very site?
+### What could be a more fitting hello world than a dev log for making this very site?
+
+If you're reading this you know the internet sucks.
+
+While getting this site up and running I've thinking a lot about *why* the internet sucks so much. Why do we miss the "old internet" so much? I barely even interacted with it growing up and I still miss so much of what it stood for. The internet was once an exciting thing and now its part of everything blah blah blah I could go on talking about how its lame.
+
+
+When the internet first started to make it's way into homes it was something you had to *know* how to use. A place for the geeks, the engineers, or anyone willing to learn. Your website didn't need to be easy enough for grandma to understand because she wasn't on the internet! It was a place for people who wanted to see the internet. The internet itself was the piece of art. The website was what made it interesting along with the stuff hosted on it. A beautiful symbiotic relationship that strengthened the message of each other. 
+
+I don't think anyone uses a website these days because the website itself is particularly interesting. It's a means to an end to find the stuff you care about on said websites. Regardless of their "vibe" algorithms are really nice for discovering new things that you vibe with! I found plenty of my favorite bands through discover playlists on that one green music app, discovered youtubers that have fundamentally changed how i view the world and solve problems, and incredible life long friends through apps like Twitter. The concept of an algorithm isnt inherently flawed, but it's lacking something.
+
+## ◆ intentionality
+
+Most of my critiques of the modern internet boils down to *intentionality*. By and large content is *served*, not shared; playlists are *generated*, not curated; and essays are *machine-given*, not written. Regardless of how good or bad the situation is, it lacks intentionality, and I think this is what a lot of people desire whether they realize it or not. 
+
+rework:
+Eddy Burback's wonderful video [I hate my phone so I got rid of it](https://www.youtube.com/watch?v=nnsyGSTKlw0) 
+
+is a fabulous video that helps demonstrate our lack of intentionality. Instead of firing off a text, his loved ones left *voicemails*. Something that requires intentional thought to both record and to listen to. 
+
+Did I get rid of my phone because of this video? No. In fact I'm still on it way more than id like to be.
+
+In early 2024 I got really interested in iPods, which started to plant the seed of this thesis in my mind. I couldn't press play and have Spotify's data center pick what I listen based on weights in their models, I had to *choose* what to play. Even if I decided to shuffle all of my music I knew everything I was listening to was playing because I intentionally put it on the iPod myself. 
+
+
+
+
+
+the web went from something that was only accessed by the biggest nerds ever to something that ***everyone*** uses. i know from working retail that the average person is very *very* dumb. knowing that it makes plenty of sense to converge on the most simplistic streamlined design ever. the bastardizeation of the web isnt all bad i have to admit, sites are way more accessible than ever before and thats obviously a great thing. 
+
+{{ clean_break() }}
+
 
 orignally i had intended on using Ghost for blogging purposes but it was far too 'polished' for me. i wanted something that i could really make my own rather than something that looks nice by default. i have been very inspired by [eevee's site](https://eev.ee) that she recently redesigned at the time of writing this. her blog post [Fresh start](https://eev.ee/blog/2024/12/03/fresh-start/) details her feelings about the blog itself and the direction she wants to take it. she gave her reasoning for opting to use pelican as the backbone for the site and since i trust her knowledge and enjoy the design of it i thought i might as well follow her paw prints and go the same route.
 
@@ -69,7 +100,6 @@ I'm realizing that pure css for text cant give me the embossed look i want, so i
 
 something interesting about the modern internet is how browsers are SOOO advanced. the amount of things you can do purely via html and css is mind boggling. so then... why does the internet feel so dead now? its too sleek and too 'perfect'. its obviously not about the technology!
 
-the web went from something that was only accessed by the biggest nerds ever to something that ***everyone*** uses. i know from working retail that the average person is very *very* dumb. knowing that it makes plenty of sense to converge on the most simplistic streamlined design ever. the bastardizeation of the web isnt all bad i have to admit, sites are way more accessible than ever before and thats obviously a great thing. 
 
 
 i want to build a really nice toolkit NOW so that future me can write articles quickly and easily without having to fuss about with making things look the way they should

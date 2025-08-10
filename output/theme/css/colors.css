@@ -103,6 +103,10 @@ body {
     box-shadow: inset 2px 2px 3px var(--overlay2), inset -2px -2px 3px var(--surface2);
 }
 
+h2 {
+    color: var(--red);
+}
+
 
 
 #shadeSelector {
