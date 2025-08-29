@@ -336,3 +336,8 @@
 .iconTag {
     height: 130px;
 }
+
+:root {
+    overscroll-behavior: none;
+    overscroll-behavior-y: none;
+}

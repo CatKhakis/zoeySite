@@ -1,5 +1,5 @@
 // oneko.js: https://github.com/adryd325/oneko.js
-/*
+
 (function oneko() {
   const isReducedMotion =
     window.matchMedia(`(prefers-reduced-motion: reduce)`) === true ||
@@ -236,4 +236,3 @@
 
   init();
 })();
-*/
