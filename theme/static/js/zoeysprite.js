@@ -1,9 +1,9 @@
 class Zoey {
 
-    x = 350;
-    y = 400;
+    x = 0;
+    y = 0;
 
-    scale = 4;
+    scale = 3.5;
 
     lastFrameTimestamp;
 
@@ -17,12 +17,15 @@ class Zoey {
         scratchS: [[3, 2], [3, 3],15],
         scratchSelf: [[4, 0], [4, 1], 4],
         alert: [[5, 0], 4],
+        walkRight: [[1, 0], [1, 1], 4],
+        walkLeft: [[1, 2], [1, 3], 4],
     };
 
     constructor () {
 
-        this.setSprite('idle');
+        this.setSprite('walkLeft');
 
+        this.titleBar = document.getElementById("titlebar");
         this.pageSections = document.getElementById("content").children;
 
         this.zoey = document.createElement("div");
@@ -34,8 +37,6 @@ class Zoey {
         this.zoey.style.position = "fixed";
         this.zoey.style.pointerEvents = "none";
         this.zoey.style.imageRendering = "pixelated";
-        this.zoey.style.left = `${this.x - 16}px`;
-        this.zoey.style.top = `${this.y - 16}px`;
         this.zoey.style.zIndex = 2147483647;
 
         let nekoFile = "../images/zoey/sprites/zoeysprite.gif"
@@ -95,18 +96,20 @@ class Zoey {
 
     updateScroll() {
 
-        for (const section of this.pageSections) {
-            /*
-        var rect = section.getBoundingClientRect();
-            //console.log(rect.top, rect.right, rect.bottom, rect.left);
-        }
-            */
+        this.yAnchor = this.titleBar.getBoundingClientRect().top;
+        this.xAnchor = this.titleBar.getBoundingClientRect().left;
+        
+        //this.x = this.titleBar.children.item(0).children[0].getBoundingClientRect().right - this.xAnchor;
+        this.x = this.titleBar.children.item(1).getBoundingClientRect().left - this.xAnchor - (32 * this.scale);
+        this.y = this.pageSections[0].children[0].getBoundingClientRect().top - this.yAnchor - ((32 - this.offset) * this.scale);
+        
+        //left bound
+        //this.titleBar.children.item(0).children[0].getBoundingClientRect().right - this.xAnchor;
+        //right bound
+        // this.titleBar.children.item(1).getBoundingClientRect().left;
 
-        //console.log("");
-
-            this.y = this.pageSections[0].getBoundingClientRect().top;
-            this.zoey.style.top = `${this.y - (32 - this.offset) * this.scale}px`;
-        }
+        this.zoey.style.top = `${this.yAnchor + this.y}px`;
+        this.zoey.style.left = `${this.xAnchor + this.x}px`;
     }
 }
 
