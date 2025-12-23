@@ -50,11 +50,6 @@
     color: var(--text);
 }
 
-#banner h1 a:link, #banner h1 a:visited {
-    color: var(--text);
-}
-
-
 body {
     background: var(--crust);
 }
@@ -140,10 +135,6 @@ a:hover, a:active {
     background: var(--red);
     color: var(--ctp-latte-crust);
     text-shadow: none !important;
-}
-
-#banner h1 a:hover, #banner h1 a:active {
-    color: var(--red);
 }
 
 .entry-title a:link, .entry-title a:visited {

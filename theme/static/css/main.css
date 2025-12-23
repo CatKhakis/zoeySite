@@ -13,6 +13,7 @@
 @import url("./fonts.css");
 @import url("./zoeySite.css");
 @import url('./layout.css');
+@import url('./sideBar.css');
 /* 
 @import url("./colors.css"); */
 /* @import url('./catppuccin.css'); */
@@ -120,27 +121,6 @@ img.left, figure.left, div.figure.align-left {
     margin: 0 auto;
     padding: 0.8em 0 0 0;
 }
-
-	/* Banner */
-#banner h1 {
-    font-size: 3.571em;
-    line-height: 1.0;
-    margin-bottom: .3em;
-}
-
-#banner h1 a:link, #banner h1 a:visited {
-    display: block;
-    font-weight: bold;
-    margin: 0 0 0 .2em;
-    text-decoration: none;
-}
-#banner h1 a:hover, #banner h1 a:active {
-    background: none;
-    text-shadow: none;
-}
-
-#banner h1 strong {font-size: 0.36em; font-weight: normal;}
-
 	/* Main Nav */
 #banner nav {
     font-size: 1.143em;

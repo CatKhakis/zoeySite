@@ -48,16 +48,23 @@
 	{% endblock head %}
 </head>
 
-<body id="index" class="home flexRow">
+<body id="index" class="home">
 
 	<div id="leftContent">
+		<div id="sideBar">
+			<div id="siteName">
+				<div id="nameContainer"><h1><a href="{{ SITEURL }}/">LarkBark</a></h1></div>
+			</div>
+			<div id="siteIndex">siteIndex</div>
+			<div id="zoeyHome">
+				<p>© 2025 Zoey - Violet Lark</p>
+			</div>
+		</div>
 	</div>
 
 	<div id="centerContent">
 
 		<header id="banner" class="body">
-			<h1><a href="{{ SITEURL }}/">{{ SITENAME }}{% if SITESUBTITLE %} <strong>{{ SITESUBTITLE }}</strong>{% endif
-					%}</a></h1>
 			<nav>
 				<ul>
 					{% for title, link in MENUITEMS %}

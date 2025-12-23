@@ -6,22 +6,33 @@
     --titlebar_min_width: 800px;
 }
 
-
+#index {
+    display: flex;
+    justify-content: space-between;
+}
 
 #leftContent {
-    flex-grow: 1;
+    min-width: 350px;
+    max-width: 450px;
 
     display: flex;
     justify-content: center;
+
+    flex-grow: 1;
 }
 
 #centerContent {
 
     max-width: var(--center_content_max_width);
     min-width: var(--center_content_min_width);
+
+    flex-grow: 2;
 }
 
 #rightContent {
+
+    min-width: 50px;
+
     flex-grow: 1;
 }
 

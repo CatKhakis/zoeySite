@@ -9,7 +9,7 @@ class Zoey {
 
     spriteSets = {
         pet: [[0, 1], [0, 2], [0, 3], 4],
-        sleep: [[2, 0], [2, 1], 4],
+        sleep: [[2, 0], [2, 1], 5],
         yawn: [[2, 2], 4],
         idle: [[2, 3], 4],
         lookDown: [[3, 0], 9],
@@ -23,9 +23,10 @@ class Zoey {
 
     constructor () {
 
-        this.setSprite('walkLeft');
+        this.setSprite('sleep');
 
         this.titleBar = document.getElementById("titlebar");
+        this.home = document.getElementById("zoeyHome");
         this.pageSections = document.getElementById("content").children;
 
         this.zoey = document.createElement("div");
@@ -48,13 +49,17 @@ class Zoey {
         this.zoey.style.backgroundImage = `url(${nekoFile})`;
         this.zoey.style.backgroundSize = `${288 * this.scale}px ${128 * this.scale}px`;
 
-        document.body.appendChild(this.zoey);
-
+        
         this.loopSprite = this.loopSprite.bind(this);
         window.requestAnimationFrame(this.loopSprite);
 
+        document.body.appendChild(this.zoey);
+
         this.updateScroll = this.updateScroll.bind(this);
-        document.addEventListener("scroll", this.updateScroll);
+        //document.addEventListener("scroll", this.updateScroll);
+        window.addEventListener("resize", this.updateScroll);
+
+        this.updateMode = "home";
 
         this.updateScroll();
     }
@@ -96,17 +101,31 @@ class Zoey {
 
     updateScroll() {
 
-        this.yAnchor = this.titleBar.getBoundingClientRect().top;
-        this.xAnchor = this.titleBar.getBoundingClientRect().left;
-        
-        //this.x = this.titleBar.children.item(0).children[0].getBoundingClientRect().right - this.xAnchor;
-        this.x = this.titleBar.children.item(1).getBoundingClientRect().left - this.xAnchor - (32 * this.scale);
-        this.y = this.pageSections[0].children[0].getBoundingClientRect().top - this.yAnchor - ((32 - this.offset) * this.scale);
-        
-        //left bound
-        //this.titleBar.children.item(0).children[0].getBoundingClientRect().right - this.xAnchor;
-        //right bound
-        // this.titleBar.children.item(1).getBoundingClientRect().left;
+        if (this.updateMode === 'titlebar') {
+
+            this.yAnchor = this.titleBar.getBoundingClientRect().top;
+            this.xAnchor = this.titleBar.getBoundingClientRect().left;
+            
+            //this.x = this.titleBar.children.item(0).children[0].getBoundingClientRect().right - this.xAnchor;
+            this.x = this.titleBar.children.item(1).getBoundingClientRect().left - this.xAnchor - (32 * this.scale);
+            this.y = this.pageSections[0].children[0].getBoundingClientRect().top - this.yAnchor - ((32 - this.offset) * this.scale);
+            
+            //left bound
+            //this.titleBar.children.item(0).children[0].getBoundingClientRect().right - this.xAnchor;
+            //right bound
+            // this.titleBar.children.item(1).getBoundingClientRect().left;
+
+            
+        } else if (this.updateMode === 'home') {
+
+            const bounds = this.home.getBoundingClientRect();
+
+            this.yAnchor = bounds.top;
+            this.xAnchor = bounds.left;
+            
+            this.x = bounds.width/2 - (32 * this.scale / 2);
+            this.y = - ((32 - this.offset) * this.scale);
+        }
 
         this.zoey.style.top = `${this.yAnchor + this.y}px`;
         this.zoey.style.left = `${this.xAnchor + this.x}px`;
