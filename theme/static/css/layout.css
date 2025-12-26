@@ -1,9 +1,9 @@
 :root {
     --center_content_max_width: 1200px;
-    --center_content_min_width: 900px;
+    --center_content_min_width: 800px;
 
     --titlebar_max_width: 1100px;
-    --titlebar_min_width: 800px;
+    --titlebar_min_width: 700px;
 }
 
 #index {
@@ -31,7 +31,7 @@
 
 #rightContent {
 
-    min-width: 50px;
+    min-width: 80px;
 
     flex-grow: 1;
 }

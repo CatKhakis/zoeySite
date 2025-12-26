@@ -4,6 +4,7 @@ Date: 2025-10-11
 Day: 11
 Month: October
 Year: 2025
+status: hidden
 
 {% from 'macros.html' import clean_break %}
 

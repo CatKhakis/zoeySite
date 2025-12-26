@@ -1,4 +1,5 @@
 Title: dashPuppy
+Category: Projects
 
 {% from 'macros.html' import polaroid, clean_break %}
 {% from 'macros/sections.html' import sectionStart, sectionEnd, body, side %}
