@@ -53,11 +53,45 @@
 	<div id="leftContent">
 		<div id="sideBar">
 			<div id="siteName">
-				<div id="nameContainer"><h1 class=""><a href="{{ SITEURL }}/">LarkBark</a></h1></div>
+				<div id="nameContainer"><h1><a href="{{ SITEURL }}/">LarkBark</a></h1></div>
 				<object data="/images/logos/github-brands-solid-full.svg" type="image/svg+xml"></object>
 				{{ lucide("mail") }}
 			</div>
-			<div id="siteIndex">siteIndex</div>
+			<nav id="siteIndex">
+				<div>
+					{% for title, link in MENUITEMS %}
+						<li><a href="{{ link }}">{{ title }}</a></li>
+					{% endfor %}
+
+					<div id="nameContainer"><h2><a href="{{ SITEURL }}/">Projects</a></h2></div>
+					{% for pg in pages %}
+						{% if pg.tags -%}
+							{% for tag in pg.tags %}
+								{% if tag == "Project" -%}
+									<li{% if pg==page %} class="active" {% endif %}><a href="{{ SITEURL }}/{{ pg.url }}">{{ pg.title}}</a></li>
+								{% endif %}
+							{% endfor %}
+						{% endif %}
+					{% endfor %}
+
+
+				
+					<div id="nameContainer"><h2><a href="{{ SITEURL }}/">Blog Posts</a></h2></div>
+					{% for cat, null in categories %}
+						<li{% if cat==category %} class="active" {% endif %}><a href="{{ SITEURL }}/{{ cat.url }}">{{cat }} × {{ null | length }}</a></li> 
+					{% endfor %}
+
+				</div>
+			</nav>
+
+			<div id="staticIndex">
+				
+				<li><a href="{{ SITEURL }}/pages/zoeys-refsheet.html">Zoey's Refsheet</a></li>
+
+			</div>
+
+			<div id="whiteSpace"></div>
+
 			<div id="zoeyHome">
 				<p>© 2025 Zoey - Violet Lark</p>
 			</div>
@@ -67,25 +101,6 @@
 	<div id="centerContent">
 
 		<header id="banner" class="body">
-			<nav>
-				<ul>
-					{% for title, link in MENUITEMS %}
-					<li><a href="{{ link }}">{{ title }}</a></li>
-					{% endfor %}
-					{% if DISPLAY_PAGES_ON_MENU -%}
-					{% for pg in pages %}
-					<li{% if pg==page %} class="active" {% endif %}><a href="{{ SITEURL }}/{{ pg.url }}">{{ pg.title
-							}}</a></li>
-						{% endfor %}
-						{% endif %}
-						{% if DISPLAY_CATEGORIES_ON_MENU -%}
-						{% for cat, null in categories %}
-						<li{% if cat==category %} class="active" {% endif %}><a href="{{ SITEURL }}/{{ cat.url }}">{{
-								cat }} × {{ null | length }}</a></li> 
-							{% endfor %}
-							{% endif %}
-				</ul>
-			</nav>
 		</header><!-- /#banner -->
 		{% block content %}
 		{% endblock %}

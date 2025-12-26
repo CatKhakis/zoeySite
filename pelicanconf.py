@@ -13,6 +13,9 @@ TIMEZONE = 'America/Chicago'
 
 DEFAULT_LANG = 'en'
 
+USE_FOLDER_AS_CATEGORY = False
+DELETE_OUTPUT_DIRECTORY = True
+
 from lucide.jinja import lucide
 JINJA_GLOBALS = {"lucide": lucide}
 

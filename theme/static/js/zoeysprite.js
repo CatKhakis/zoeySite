@@ -27,7 +27,7 @@ class Zoey {
 
         this.titleBar = document.getElementById("titlebar");
         this.home = document.getElementById("zoeyHome");
-        this.pageSections = document.getElementById("content").children;
+        // this.pageSections = document.getElementById("content").children;
 
         this.zoey = document.createElement("div");
 
