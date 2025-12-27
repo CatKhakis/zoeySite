@@ -170,9 +170,13 @@
     margin: 0.4em 0em 0.4em 0.6em;
 
     font-size: 1.3em;
-    font-weight: bold;
 
     list-style-type: none;
+
+    display: flex;
+    align-items: center;
+    
+    gap: 8px;
 }
 
 #sideBar li a:link, #sideBar li a:visited{

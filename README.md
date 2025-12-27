@@ -10,7 +10,7 @@ cd ~/Documents/VSCode/zoeySite
 ## to-do
 
 ### project pages
-- [ ] create pages
+- [x] create pages
 - [ ] dashPuppy
 - [ ] homelab
 - [ ] ipod parsing
@@ -27,3 +27,5 @@ cd ~/Documents/VSCode/zoeySite
 - [ ] projects (pages with attached devlog posts)
 - [x] make zoey sprite static
 - [ ] fix zoey "flash" on load
+
+- [ ] fix css page centering

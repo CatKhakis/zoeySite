@@ -83,7 +83,12 @@
 						{% if pg.tags -%}
 							{% for tag in pg.tags %}
 								{% if tag == "Project" -%}
-									<li{% if pg==page %} class="active" {% endif %}><a href="{{ SITEURL }}/{{ pg.url }}">{{ pg.title}}</a></li>
+									<li{% if pg==page %} class="active" {% endif %}>
+										{% if pg.icon -%}
+											{{ lucide( pg.icon ) }}
+										{% endif %}
+										<a href="{{ SITEURL }}/{{ pg.url }}">{{ pg.title}}</a>
+									</li>
 								{% endif %}
 							{% endfor %}
 						{% endif %}
