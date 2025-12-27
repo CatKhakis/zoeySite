@@ -1,13 +1,11 @@
 commands:
-```
-virtualenv ~/virtualenvs/pelican
+```virtualenv ~/virtualenvs/pelican
 cd ~/virtualenvs/pelican
 source bin/activate
 cd ~/Documents/VSCode/zoeySite
 ```
 
-```
-make devserver```
+```make devserver```
 
 ## to-do
 
