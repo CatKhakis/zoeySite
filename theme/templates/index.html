@@ -2,6 +2,18 @@
 
 {% block content_title %}{% endblock %}
 {% block content %}
+
+    {% for pg in pages %}
+        {% if pg.tags -%}
+            {% for tag in pg.tags %}
+                {% if tag == "Project" -%}
+                    <li{% if pg==page %} class="active" {% endif %}><a href="{{ SITEURL }}/{{ pg.url }}">{{ pg.title}}</a></li>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+
+
     {% if articles %}
     <div id="test" class="flexColumn">
         {% for article in articles_page.object_list %}

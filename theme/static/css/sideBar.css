@@ -1,6 +1,7 @@
 
 
 #sideBar{
+    
     min-width: 300px;
     max-width: 350px;
 
@@ -42,9 +43,8 @@
 
 #siteName {
     width: 100%;
-    height: 150px;
 
-    margin-top: 40px;
+    margin-top: 20px;
     margin-bottom: 40px;
 
     border-radius: 10px;
@@ -54,7 +54,7 @@
     inset 0px 1px 3px color-mix(in hsl, hsl(from var(--surface0) h s l), white 20%),
     inset 0px -1px 4px color-mix(in hsl, hsl(from var(--surface0) h s l), black 60%);
 
-    transition: all 0.1s ease-out;
+    transition: all 0.1s ease-in-out;
 }
 
 #siteName:hover {
@@ -62,11 +62,16 @@
     margin-bottom: 20px;
 }
 
-#siteName svg, object {
-    height: 50px;
-    width: 50px;
+#siteName svg {
+    height: 32px;
+    width: 32px;
 
     color: var(--text);
+}
+
+#github path {
+
+    fill: var(--text);
 }
 
 /*-------- h1 --------*/
@@ -101,6 +106,30 @@
     color: var(--red);
 }
 
+#socialContainer {
+
+    padding: 0px 15px 10px 15px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+#socialContainer h3 {
+    display: none;
+}
+
+#socials {
+    display: flex;
+    flex-direction: row;
+
+    gap: 5px;
+}
+
+
+
 
 
 /*------------- site index -------------*/
@@ -120,15 +149,17 @@
     margin-bottom: 20px;
 }
 
-#siteIndex h2{
+#sideBar h2{
+
+    color: var(--ctp-latte-yellow);
 
     margin: 0;
 }
 
-#siteIndex h2 a:link, #siteIndex h2 a:visited{
+#sideBar h2 a:link, #siteIndex h2 a:visited{
     text-align: left;
-    color: var(--ctp-latte-yellow);
 
+    color: var(--ctp-latte-yellow);
     display: block;
     margin: 0;
     text-decoration: none;
