@@ -188,11 +188,21 @@
 .polaroid {
     position: absolute;
     transition: 0.2s;
+
+    border-radius: 1px;
 }
 
 .polaroid:hover {
     transition: 0.2s;
     transform: rotate(2deg);
+}
+
+.polaroidLink {
+    display: block;
+}
+
+.polaroidLink:hover {
+    color: none;
 }
 
 .polaroid_image {
@@ -208,6 +218,8 @@
 
 .polaroid_image img {
     object-fit: cover;
+
+    border-radius: 2px;
 }
 
 .polaroid_text * {

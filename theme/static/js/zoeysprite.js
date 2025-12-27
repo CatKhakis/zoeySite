@@ -36,7 +36,7 @@ class Zoey {
         this.zoey.style.width = `${32 * this.scale}px`;
         this.zoey.style.height = `${32 * this.scale}px`;
         this.zoey.style.position = "fixed";
-        this.zoey.style.pointerEvents = "none";
+        // this.zoey.style.pointerEvents = "none";
         this.zoey.style.imageRendering = "pixelated";
         this.zoey.style.zIndex = 2147483647;
 
@@ -59,8 +59,17 @@ class Zoey {
         //document.addEventListener("scroll", this.updateScroll);
         window.addEventListener("resize", this.updateScroll);
 
-        this.updateMode = "home";
 
+        zoey.addEventListener("mouseenter", (event) => {
+            this.setSprite('pet');
+            this.zoey.style.cursor = "none";
+        });
+        zoey.addEventListener("mouseleave", (event) => {
+            this.setSprite('sleep');
+            this.zoey.style.cursor = "auto";
+        });
+
+        this.updateMode = "home";
         this.updateScroll();
     }
 

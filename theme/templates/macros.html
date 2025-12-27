@@ -23,13 +23,16 @@
         <div class="polaroid" style="transform: rotate(10deg); top: 4px; left: 7px;"></div>
     {% endif %}
 
-    <div class="polaroid">
-        <div class="polaroid_image">
-            <img src="https://catkhakis.github.io/zoeySite/{{ src }}" style="object-position: {{ position }};">
+    <a class="polaroidLink" href="../pages/gallery">
+        <div class="polaroid">
+            
+            <div class="polaroid_image">
+                <img src="../{{ src }}" style="object-position: {{ position }};">
+            </div>
+            <div class="polaroid_text flexCenter">
+                <h2>{{ text }}</h2>
+            </div>
         </div>
-        <div class="polaroid_text flexCenter">
-            <h2>{{ text }}</h2>
-        </div>
-    </div>
+    </a>
 </div>
 {%- endmacro %}

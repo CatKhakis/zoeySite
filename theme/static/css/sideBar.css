@@ -9,6 +9,7 @@
 
     display: flex;
     justify-content: space-between;
+    align-items: center;
 
     flex-direction: column;
 
@@ -198,6 +199,8 @@
     box-shadow: 
     inset 0px 1px 3px color-mix(in hsl, hsl(from var(--surface0) h s l), white 20%),
     inset 0px -1px 4px color-mix(in hsl, hsl(from var(--surface0) h s l), black 60%);
+
+    margin-bottom: 20px;
 }
 
 

@@ -19,6 +19,7 @@ cd ~/Documents/VSCode/zoeySite
 - [ ] discard
 
 - [ ] home page
+- [ ] gallery
 
 ### functions
 - [x] fix links

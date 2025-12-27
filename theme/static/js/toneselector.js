@@ -22,15 +22,15 @@ shadeSelector.addEventListener("click", (event) => {
     }
 });
 
-shadeSelector.addEventListener("mouseenter", (event) => { 
+// shadeSelector.addEventListener("mouseenter", (event) => { 
 
-    console.log("mouseenter");
-});
+//     console.log("mouseenter");
+// });
 
-shadeSelector.addEventListener("mouseleave", (event) => { 
+// shadeSelector.addEventListener("mouseleave", (event) => { 
 
-    console.log("mouseleave");
-});
+//     console.log("mouseleave");
+// });
 
 function updateTone() {
     currentTone = root.classList[0];

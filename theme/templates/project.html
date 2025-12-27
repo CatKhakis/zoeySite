@@ -15,8 +15,6 @@
 {% from 'macros/titlebar.html' import content_title %}
 {{ content_title(page, true, "page") }}
 
-<div>project test</div>
-
   <page id="content" class="body">
     <section class="content_section">
       <div class="section-item body">
@@ -25,4 +23,20 @@
       </div><!-- /.entry-content -->
     </section>
   </page>
+
+  {% if articles %}
+
+      {% for article in articles %}
+        {% if article.tags -%}
+          {% for tag in article.tags %}
+            {% if tag == page.title -%}
+              <div>{{ article.title }}</div>
+            {% endif %}
+          {% endfor %}
+        {% endif %}
+      {% endfor %}
+  {% endif %}
+
 {% endblock %}
+
+
