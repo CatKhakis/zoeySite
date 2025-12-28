@@ -30,3 +30,16 @@ cd ~/Documents/VSCode/zoeySite
 - [ ] fix zoey "flash" on load
 
 - [ ] fix css page centering
+
+- [ ] site metadata
+- [ ] favicon
+
+- [ ] social links
+
+footer
+- [ ] source code
+- [ ] pelican
+- [ ] lucide
+- [ ] catppuccin
+
+- [ ] remove vestigal businesscard code (removing breaks tone selector)

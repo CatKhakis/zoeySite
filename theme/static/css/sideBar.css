@@ -21,6 +21,8 @@
 
 #nameContainer {
 
+    width: 100%;
+
     border-radius: 10px;
 
     background: var(--surface1);
@@ -33,11 +35,32 @@
 
     padding: 10px;
 
-    margin-bottom: 10px;
+    
+}
+
+
+
+a:hover #nameContainer {
+
+    background: var(--ctp-latte-yellow);
+    box-shadow: 
+    inset 0px 1px 3px color-mix(in hsl, hsl(from var(--ctp-latte-yellow) h s l), white 20%),
+    inset 0px -1px 4px color-mix(in hsl, hsl(from var(--ctp-latte-yellow) h s l), black 60%),
+    0px 4px 8px color-mix(in hsl, hsl(from var(--surface1) h s l), black 30%);
+
+    color: var(--surface1);
 }
 
 #nameContainer:not(:first-child) {
     margin-top: 15px;
+}
+
+#sideBar a {
+    margin-bottom: 10px;
+}
+
+#sideBar a:hover {
+    background: none;
 }
 
 /*------------- site name -------------*/
@@ -55,11 +78,10 @@
     inset 0px 1px 3px color-mix(in hsl, hsl(from var(--surface0) h s l), white 20%),
     inset 0px -1px 4px color-mix(in hsl, hsl(from var(--surface0) h s l), black 60%);
 
-    transition: all 0.1s ease-in-out;
+    transition: all 0.2s ease-in-out;
 }
 
 #siteName:hover {
-    height: 300px;
     margin-bottom: 20px;
 }
 
@@ -78,7 +100,7 @@
 /*-------- h1 --------*/
 
 #siteName #nameContainer {
-    
+
     align-items: center;
     justify-content: center;
 }
@@ -104,6 +126,8 @@
     background: none;
     text-shadow: none;
 
+    font-weight: bold;
+
     color: var(--red);
 }
 
@@ -128,6 +152,57 @@
 
     gap: 5px;
 }
+
+#siteName:hover #socialContainer {
+    display: none;
+    visibility: collapse;
+}
+
+#fullSocial {
+
+    padding: 2px 15px 10px 15px;
+
+    flex-direction: column;
+    gap: 8px;
+
+    justify-content: space-between;
+}
+
+#fullSocial h3 {
+
+    margin: 0;
+}
+
+#fullSocial #socials {
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 6px;
+}
+
+#fullSocial #socials a {
+
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+
+    gap: 8px;
+}
+
+#siteName #fullSocial {
+
+    display: none;
+    visibility: collapse;
+}
+
+#siteName:hover #fullSocial {
+    
+    display: flex;
+    visibility: visible;
+}
+
+
 
 
 
@@ -168,15 +243,17 @@
 
 #sideBar li{
     
-    margin: 0.4em 0em 0.4em 0.6em;
+    margin: 0.4em 0.6em 0.4em 0.6em;
 
     font-size: 1.3em;
 
     list-style-type: none;
+}
 
+#sideBar a{
     display: flex;
     align-items: center;
-    
+
     gap: 8px;
 }
 

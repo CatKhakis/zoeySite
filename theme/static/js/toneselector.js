@@ -1,8 +1,14 @@
 const root = document.querySelector(':root');
 const shadeSelector = document.getElementById("shadeSelector");
 
-//change for remembering last state
-root.classList.add("frappe");
+
+const cachedTone = localStorage.getItem("tone");
+
+if (cachedTone) {
+    root.classList.add(cachedTone);
+} else {
+    root.classList.add("macchiato");
+}
 
 //hide other states when not hovered over
 
@@ -35,6 +41,8 @@ shadeSelector.addEventListener("click", (event) => {
 function updateTone() {
     currentTone = root.classList[0];
 
+    localStorage.setItem("tone", currentTone);
+
     // rootRules = getStylesheet("colors.css").cssRules[0].style;
     rootRules = getStylesheet().style;
     
@@ -44,16 +52,6 @@ function updateTone() {
         rootRules.setProperty(propertyName, `var(--ctp-${currentTone}${propertyName.replace('--', '-')})`);
     }
 }
-
-
-// function getStylesheet(href) {
-//     for (const element of document.styleSheets[0].cssRules) {
-//         if (href === element.href) {
-//             return element.styleSheet;
-//         }
-//     }
-//     return null;
-// }
 
 function getStylesheet() {
     for (const sheet of document.styleSheets) {
