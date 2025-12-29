@@ -3,52 +3,18 @@
 {% block content_title %}{% endblock %}
 {% block content %}
 
-    {% for pg in pages %}
-        {% if pg.tags -%}
-            {% for tag in pg.tags %}
-                {% if tag == "Project" -%}
-                    <li{% if pg==page %} class="active" {% endif %}><a href="{{ SITEURL }}/{{ pg.url }}">{{ pg.title}}</a></li>
-                {% endif %}
-            {% endfor %}
-        {% endif %}
-    {% endfor %}
-
+    <div>v index v</div>
 
     {% if articles %}
-    <div id="test" class="flexColumn">
-        {% for article in articles_page.object_list %}
+        <div class="flexColumn">
+            {% for article in articles_page.object_list %}
 
-        {# First item #}
-            {% if loop.first and not articles_page.has_previous() %}
-                <aside id="featured" class="body">
-                    {% from 'macros/titlebar.html' import content_title %}
-                    {{ content_title(article, false) }}
-                    <article>
-                        <!-- <h1 class="entry-title"><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h1> -->
-                        {{ article.summary }}
-                    </article>
-                </aside><!-- /#featured -->
+            {% from 'indexitem.html' import indexitem %}
+            {{ indexitem(article) }}
 
-                {% if loop.length > 1 %}
-                {% endif %}
-                
-        {# other items #}
-            {% else %}
-
-                <aside id="featured" class="body">
-                    {% from 'macros/titlebar.html' import content_title %}
-                    {{ content_title(article, false) }}
-                    <article>
-                        <!-- <h1 class="entry-title"><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h1> -->
-                        {{ article.summary }}
-                    </article>
-                </aside><!-- /#featured -->
-
-
-            {% endif %}
-            
-        {% endfor %}
+            {% endfor %}
+        </div>
     {% endif %}
 
-    </div>
+    
 {% endblock content %}

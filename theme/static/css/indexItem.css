@@ -1,0 +1,36 @@
+.indexItem {
+    background: var(--surface0);
+    box-shadow: 
+    inset 0px 1px 3px color-mix(in hsl, hsl(from var(--surface0) h s l), white 20%),
+    inset 0px -1px 4px color-mix(in hsl, hsl(from var(--surface0) h s l), black 60%);
+
+    margin-bottom: 2em;
+    overflow: hidden;
+    padding: 20px;
+    width: 760px;
+
+    border-radius: 10px;
+}
+
+.indexItem article {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+.indexItem .indexRow {
+    display: flex;
+
+    flex-direction: row;
+}
+
+.indexItem img {
+
+    height: 250px;
+    aspect-ratio: 1;
+    
+    object-fit: cover;
+    object-position: center;
+}

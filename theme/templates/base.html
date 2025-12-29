@@ -56,6 +56,16 @@
 
 	<div id="centerContent">
 
+		<div>project index snippet</div>
+		{% for pg in pages %}
+			{% if pg.tags -%}
+				{% for tag in pg.tags %}
+					{% if tag == "Project" -%}
+						<li{% if pg==page %} class="active" {% endif %}><a href="{{ SITEURL }}/{{ pg.url }}">{{ pg.title}}</a></li>
+					{% endif %}
+				{% endfor %}
+			{% endif %}
+		{% endfor %}
 		
 		{% block content %}
 		{% endblock %}

@@ -61,7 +61,7 @@ body {
     inset 0px -1px 4px color-mix(in hsl, hsl(from var(--surface2) h s l), black 60%);
 }
 
-#featured, .section-item, #titlebar .left, #titlebar .right {
+.section-item, #titlebar .left, #titlebar .right {
     background: var(--surface0);
     box-shadow: 
     inset 0px 1px 3px color-mix(in hsl, hsl(from var(--surface0) h s l), white 20%),

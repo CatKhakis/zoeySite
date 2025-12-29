@@ -3,4 +3,4 @@ Icon: server
 Tags: Project
 Template: project
 
-homelab
+homelab information

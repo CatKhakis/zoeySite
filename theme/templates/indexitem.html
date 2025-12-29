@@ -1,0 +1,20 @@
+{% macro indexitem(item) -%}
+
+    <aside class="indexItem body">
+        <!-- {% from 'macros/titlebar.html' import content_title %}
+        {{ content_title(item, false) }} -->
+
+        <article>
+            <div class="indexRow">
+                <h1 class="entry-title"><a href="{{ SITEURL }}/{{ item.url }}">{{ item.title }}</a></h1>
+                <div>{{ item.tags }}</div>
+            </div>
+            <div class="indexRow">
+                {% if item.cover %}
+                    <img src="{{ item.cover }}" class="img-fluid">
+                {% endif %}
+                <div>{{ item.summary }}</div>
+            </div>
+        </article>
+    </aside><!-- /#featured -->
+{%- endmacro %}

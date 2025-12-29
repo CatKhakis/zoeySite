@@ -43,3 +43,5 @@ footer
 - [ ] catppuccin
 
 - [ ] remove vestigal businesscard code (removing breaks tone selector)
+
+- [ ] fix link highlighting
