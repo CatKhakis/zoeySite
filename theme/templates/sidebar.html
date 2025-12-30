@@ -1,6 +1,6 @@
 <div id="sideBar">
     <div id="siteName">
-        <a href="{{ SITEURL }}/"><div id="nameContainer"><h1>LarkBarks</h1></div></a>
+        <a class="titleLink" href="{{ SITEURL }}/"><div id="nameContainer"><h1>LarkBarks</h1></div></a>
         <div id="socialContainer">
             <h2>Violet Lark</h2>
 
@@ -37,7 +37,7 @@
                 <li><a href="{{ link }}">{{ title }}</a></li>
             {% endfor %}
 
-            <a href="{{ SITEURL }}/"><div id="nameContainer"><h2>Projects</h2></div></a>
+            <a class="titleLink" href="{{ SITEURL }}/"><div id="nameContainer"><h2>Projects</h2></div></a>
             {% for pg in pages %}
                 {% if pg.tags -%}
                     {% for tag in pg.tags %}
@@ -56,7 +56,7 @@
             {% endfor %}
 
 
-            <a href="{{ SITEURL }}/"><div id="nameContainer"><h2>Blog Posts</h2></div></a>
+            <a class="titleLink" href="{{ SITEURL }}/"><div id="nameContainer"><h2>Blog Posts</h2></div></a>
             {% for cat, null in categories %}
                 <li{% if cat==category %} class="active" {% endif %}><a href="{{ SITEURL }}/{{ cat.url }}">{{cat }} × {{ null | length }}</a></li> 
             {% endfor %}

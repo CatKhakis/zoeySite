@@ -44,4 +44,4 @@ footer
 
 - [ ] remove vestigal businesscard code (removing breaks tone selector)
 
-- [ ] fix link highlighting
+- [x] fix link highlighting

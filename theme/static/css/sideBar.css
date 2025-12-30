@@ -105,32 +105,6 @@ a:hover #nameContainer {
     justify-content: center;
 }
 
-#siteName h1 {
-    font-size: 3.571em;
-    line-height: 1.0;
-
-    margin: 0;
-
-    text-align: center;
-}
-
-#siteName h1 a:link, #siteName h1 a:visited {
-    display: block;
-    font-weight: bold;
-    margin: 0;
-    text-decoration: none;
-
-    color: var(--ctp-latte-yellow);
-}
-#siteName h1 a:hover, #siteName h1 a:active {
-    background: none;
-    text-shadow: none;
-
-    font-weight: bold;
-
-    color: var(--red);
-}
-
 #socialContainer {
 
     padding: 0px 15px 10px 15px;
@@ -225,22 +199,6 @@ a:hover #nameContainer {
     margin-bottom: 20px;
 }
 
-#sideBar h2{
-
-    color: var(--ctp-latte-yellow);
-
-    margin: 0;
-}
-
-#sideBar h2 a:link, #siteIndex h2 a:visited{
-    text-align: left;
-
-    color: var(--ctp-latte-yellow);
-    display: block;
-    margin: 0;
-    text-decoration: none;
-}
-
 #sideBar li{
     
     margin: 0.4em 0.6em 0.4em 0.6em;
@@ -309,4 +267,34 @@ a:hover #nameContainer {
 
 #zoeyHome p {
     padding: 15px;
+}
+
+
+
+
+
+
+#siteName h1, h2 {
+
+    margin: 0;
+}
+
+#siteName h1 {
+    font-size: 3.571em;
+    line-height: 1.0;
+
+    text-align: center;
+}
+
+#sideBar .titleLink {
+    text-decoration: none;
+}
+
+#sideBar .titleLink h1, #sideBar .titleLink h2 {
+    color: var(--ctp-latte-yellow);
+    font-weight: bold;
+}
+
+#sideBar .titleLink:hover h1, #sideBar .titleLink:hover h2 {
+    color: var(--surface0);
 }
