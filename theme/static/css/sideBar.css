@@ -221,6 +221,12 @@ a:hover #nameContainer {
     text-decoration: none;
 }
 
+#sideBar li a:hover{
+
+    color: var(--red);
+    text-decoration: none;
+}
+
 
 /*------------- static index -------------*/
 
@@ -277,6 +283,7 @@ a:hover #nameContainer {
 #siteName h1, h2 {
 
     margin: 0;
+    color: var(--ctp-latte-yellow);
 }
 
 #siteName h1 {
@@ -288,6 +295,8 @@ a:hover #nameContainer {
 
 #sideBar .titleLink {
     text-decoration: none;
+
+    padding: 0;
 }
 
 #sideBar .titleLink h1, #sideBar .titleLink h2 {

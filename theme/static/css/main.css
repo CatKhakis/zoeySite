@@ -34,9 +34,6 @@ a:hover, a:active {
     text-decoration: none;
 }
 
-h1 a:hover {
-    background-color: inherit
-}
 
 /* Paragraphs */
 div.line-block,
@@ -103,44 +100,6 @@ img.left, figure.left, div.figure.align-left {
     margin: 0 2em 2em 0;
 }
 
-/*
-	Header
-*****************/
-#banner {
-    margin: 0 auto;
-    padding: 0.8em 0 0 0;
-}
-	/* Main Nav */
-#banner nav {
-    font-size: 1.143em;
-    overflow: auto;
-    line-height: 30px;
-    margin: 0 auto 2em auto;
-    padding: 0;
-    text-align: center;
-    max-width: 1200px;
-
-    border-radius: 5px;
-    -moz-border-radius: 5px;
-    -webkit-border-radius: 5px;
-}
-
-#banner nav a:link, #banner nav a:visited {
-    display: inline-block;
-    height: 30px;
-    padding: 5px 1.5em;
-    text-decoration: none;
-}
-
-#banner nav li:first-child a {
-    border-top-left-radius: 5px;
-    -moz-border-radius-topleft: 5px;
-    -webkit-border-top-left-radius: 5px;
-
-    border-bottom-left-radius: 5px;
-    -moz-border-radius-bottomleft: 5px;
-    -webkit-border-bottom-left-radius: 5px;
-}
 
 /*
 	Body
