@@ -357,3 +357,7 @@
 img {
     border-radius: 10px;
 }
+
+img.smallImg {
+    width: 400px;
+}
