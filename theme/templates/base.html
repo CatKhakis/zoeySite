@@ -15,9 +15,7 @@
 	<meta content="../images/zoey/xxangelgutzxx.png" property="og:image" />
 	<meta content="##df8e1d" data-react-helmet="true" name="theme-color" />
 
-	<link rel="icon" type="image/x-icon" href="images/zoey/sprites/favicon.png">
-
-	<!-- <link rel="stylesheet" href="{{ THEME_STATIC_DIR }}/css/{{ CSS_FILE }}" /> -->
+	<link rel="icon" type="image/x-icon" href="../images/zoey/sprites/favicon.png">
 
 	{% assets filters="cssmin", output="css/reset.css", "css/reset.css" %}
 		<link rel="stylesheet" href="{{SITEURL}}/{{ASSET_URL}}">
@@ -30,11 +28,6 @@
 	{% assets 'colors' %}
 		<link rel="stylesheet" href="{{SITEURL}}/{{ASSET_URL}}">
 	{% endassets %}
-
-	<!-- {% assets filters="cssmin", output="css/style.min.css", "css/*.css" %}
-		<link rel="stylesheet" href="{{SITEURL}}/{{ASSET_URL}}">
-	{% endassets %} -->
-
 
 	{% if FEED_ALL_ATOM %}
 	<link
@@ -71,8 +64,6 @@
 			<div class="macchiato">{{ lucide("moon") }}</div>
 			<div class="mocha">{{ lucide("moon-star") }}</div>
 		</div>
-
-		{% include 'businesscard.html' %}
 	</div>
 
 	{% assets filters="rjsmin", output="js/packed.js", "js/*.js" %}

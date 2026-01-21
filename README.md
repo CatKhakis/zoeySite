@@ -23,8 +23,10 @@ cd ~/Documents/VSCode/zoeySite
 
 ### functions
 - [x] fix links
+- [x] fix link highlighting
 - [ ] update shade selector
 - [ ] tags
+- [ ] fix title tags
 - [ ] projects (pages with attached devlog posts)
 - [x] make zoey sprite static
 - [ ] fix zoey "flash" on load
@@ -32,7 +34,7 @@ cd ~/Documents/VSCode/zoeySite
 - [ ] fix css page centering
 
 - [ ] site metadata
-- [ ] favicon
+- [x] favicon
 
 - [x] social links
 
@@ -42,8 +44,7 @@ footer
 - [ ] lucide
 - [ ] catppuccin
 
-- [ ] remove vestigal businesscard code (removing breaks tone selector)
+optimize index (<14KB) 
 
-- [x] fix link highlighting
-
-- [ ] fix title tags
+- [x] deduplicate github svg
+- [x] remove vestigal businesscard code (removing breaks tone selector)

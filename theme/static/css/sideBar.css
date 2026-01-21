@@ -307,3 +307,12 @@ a:hover #nameContainer {
 #sideBar .titleLink:hover h1, #sideBar .titleLink:hover h2 {
     color: var(--surface0);
 }
+
+.gh-icon {
+    width: 32px;
+    height: 32px;
+
+  background: var(--text);
+  mask-image: url("../../images/logos/github-brands-solid-full.svg");
+  mask-image: url("../../images/logos/github-brands-solid-full.svg");
+} 
