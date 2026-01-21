@@ -25,3 +25,12 @@ The first DISCARD receiver was made back in 2022 with the intent of being super 
 ## Architecture test
 
 Migrating the receiver from being microcontroller based to being linux based means that I can utilize websockets and WebGL. Non-platform native applications have garnered a bad reputation for being bloated and clunky, but this is not a fault of web browsers being bad, but rather deadlines requiring half-baked unoptimized software to be pushed out. Modern web browsers are **incredibly** powerful and **incredibly** lightweight if time is put into optimization.
+
+
+### Server/Client
+When properly installed the system will have a dedicated server but for development I am simply running the server on my laptop. I'm using [Express](https://expressjs.com) for the server and the [Vue templating engine](https://vuejs.org) for the front end. Each TV will have a Raspberry Pi Zero that will automatically connect to the site on launch where as the ```/admin``` endpoint will be accessible from a laptop to configure and script the setup.
+
+
+#### Server
+
+When a new client joins the url the server checks to see whether or not it has been assigned a UUID, and if it hasn't the server assigns one and starts a websocket connection. With this data a map representing the dimensions and location of each TV can be stored on the server.

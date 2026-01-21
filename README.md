@@ -34,7 +34,7 @@ cd ~/Documents/VSCode/zoeySite
 - [ ] site metadata
 - [ ] favicon
 
-- [ ] social links
+- [x] social links
 
 footer
 - [ ] source code
