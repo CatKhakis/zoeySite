@@ -256,7 +256,7 @@ a:hover #nameContainer {
 
 #zoeyHome {
     width: 100%;
-    height: 40px;
+    height: 55px;
 
     border-radius: 20px 20px 0px 0px;
 
@@ -266,13 +266,65 @@ a:hover #nameContainer {
 
     display: flex;
 
-    align-items: center;
+    flex-direction: column;
+
+    justify-content: flex-start;
 
     margin-top: 150px;
+
+    transition: height 0.25s;
+}
+
+#zoeyHome:hover {
+    height: 75px;
 }
 
 #zoeyHome p {
-    padding: 15px;
+    padding: 16px 16px 0px 16px;
+    margin: 0px;
+}
+
+.hoverBar {
+    height: 100%;
+
+    padding: 0px 16px 0px 16px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#zoeyHome:hover .hoverBar {
+    
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.hoverBar div {
+    width: 100px;
+    height: 3px;
+
+    background: var(--surface2);
+}
+
+#zoeyHome .hoverBar p {
+    padding: 0px;
+    margin: 0px;
+
+    display: none;
+}
+
+#zoeyHome .hoverBar a {
+    display: inline;
+}
+
+#zoeyHome:hover .hoverBar p {
+    display: block;
+}
+
+#zoeyHome:hover .hoverBar div {
+    display: none;
 }
 
 

@@ -59,6 +59,7 @@ class Zoey {
         //document.addEventListener("scroll", this.updateScroll);
         window.addEventListener("resize", this.updateScroll);
 
+        this.resizeObserver.observe(this.home, this.updateScroll);
 
         zoey.addEventListener("mouseenter", (event) => {
             this.setSprite('pet');
@@ -139,6 +140,11 @@ class Zoey {
         this.zoey.style.top = `${this.yAnchor + this.y}px`;
         this.zoey.style.left = `${this.xAnchor + this.x}px`;
     }
+
+    resizeObserver = new ResizeObserver((entries) => {
+
+        this.updateScroll();
+    });
 }
 
 const zoeyClass = new Zoey();
