@@ -2,7 +2,7 @@
 
 #sideBar{
     
-    min-width: 300px;
+    min-width: 310px;
     max-width: 350px;
 
     height: 100%;
@@ -38,8 +38,6 @@
     
 }
 
-
-
 a:hover #nameContainer {
 
     background: var(--ctp-latte-yellow);
@@ -55,10 +53,6 @@ a:hover #nameContainer {
     margin-top: 15px;
 }
 
-#sideBar a {
-    margin-bottom: 10px;
-}
-
 #sideBar a:hover {
     background: none;
 }
@@ -67,6 +61,8 @@ a:hover #nameContainer {
 
 #siteName {
     width: 100%;
+
+    height: 145px;
 
     margin-top: 20px;
     margin-bottom: 40px;
@@ -78,11 +74,29 @@ a:hover #nameContainer {
     inset 0px 1px 3px color-mix(in hsl, hsl(from var(--surface0) h s l), white 20%),
     inset 0px -1px 4px color-mix(in hsl, hsl(from var(--surface0) h s l), black 60%);
 
-    transition: all 0.2s ease-in-out;
+    transition: 
+        height .25s ease-in-out,
+        margin-bottom .25s ease-in-out
+        ;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: space-between;
+}
+
+#siteName a {
+    display: flex;
+}
+
+#siteName .hoverBar {
+    height: 20px;
 }
 
 #siteName:hover {
     margin-bottom: 20px;
+
+    height: 225px;
 }
 
 #siteName svg {
@@ -107,78 +121,66 @@ a:hover #nameContainer {
 
 #socialContainer {
 
-    padding: 0px 15px 10px 15px;
+    padding: 8px 15px 0px 15px;
+
+    height: 100%;
 
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: flex-start;
 
     justify-content: space-between;
+
+    gap: 6px;
+
+    overflow: hidden;
+}
+
+#siteName:hover #socialContainer {
+    flex-direction: column;
+
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    height: 100%;
 }
 
 #socialContainer h3 {
     display: none;
 }
 
-#socials {
-    display: flex;
-    flex-direction: row;
-
-    gap: 5px;
+#siteName:hover #socialContainer h3 {
+    display: block;
+    
 }
 
-#siteName:hover #socialContainer {
-    display: none;
-    visibility: collapse;
-}
-
-#fullSocial {
-
-    padding: 2px 15px 10px 15px;
-
-    flex-direction: column;
-    gap: 8px;
-
-    justify-content: space-between;
-}
-
-#fullSocial h3 {
+#siteName h3 {
 
     margin: 0;
 }
 
-#fullSocial #socials {
+#socialContainer a {
+    margin-bottom: 0px;
 
     display: flex;
-    flex-direction: column;
-
-    gap: 6px;
-}
-
-#fullSocial #socials a {
-
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-
     gap: 8px;
+
+    align-items: center;
 }
 
-#siteName #fullSocial {
+#socialContainer .fullName {
+    flex-grow: 1;
 
-    display: none;
-    visibility: collapse;
-}
+    min-height: 32px;
 
-#siteName:hover #fullSocial {
-    
     display: flex;
-    visibility: visible;
+    
+    align-items: center;
 }
 
-
-
-
+#siteName:hover .fullName  {
+    flex-grow: 0;
+}
 
 
 
@@ -208,9 +210,11 @@ a:hover #nameContainer {
     list-style-type: none;
 }
 
-#sideBar a{
+#siteIndex a {
     display: flex;
     align-items: center;
+
+    margin-bottom: 10px;
 
     gap: 8px;
 }
@@ -286,6 +290,9 @@ a:hover #nameContainer {
 
 .hoverBar {
     height: 100%;
+
+    min-height: 20px;
+    max-height: 50px;
 
     padding: 0px 16px 0px 16px;
 

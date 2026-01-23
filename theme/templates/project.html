@@ -13,29 +13,39 @@
 {% block content %}
 
 {% from 'macros/titlebar.html' import content_title %}
-{{ content_title(page, true, "page") }}
+  {{ content_title(page, true, "page") }}
 
-  <page id="content" class="body">
+
+  <page id="project" class="body">
+
+  {% if articles %}
+
+    {% from 'indexitem.html' import indexitem %}
+    <div class="flexColumn">
+
+      <div>{{ page.title }} blog posts</div>
+    
+      {% for article in articles %}
+        {% if article.tags -%}
+          {% for tag in article.tags %}
+            {% if tag == page.title -%}
+
+              {{ indexitem(article) }}
+            {% endif %}
+          {% endfor %}
+        {% endif %}
+      {% endfor %}
+    </div>
+  {% endif %}
+
     <section class="content_section">
       <div class="section-item body">
         
         {{ page.content }}
       </div><!-- /.entry-content -->
     </section>
+
   </page>
-
-  {% if articles %}
-
-      {% for article in articles %}
-        {% if article.tags -%}
-          {% for tag in article.tags %}
-            {% if tag == page.title -%}
-              <div>{{ article.title }}</div>
-            {% endif %}
-          {% endfor %}
-        {% endif %}
-      {% endfor %}
-  {% endif %}
 
 {% endblock %}
 
