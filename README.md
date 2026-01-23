@@ -30,6 +30,7 @@ cd ~/Documents/VSCode/zoeySite
 - [ ] projects (pages with attached devlog posts)
 - [x] make zoey sprite static
 - [ ] fix zoey "flash" on load
+- [ ] zoey shadow
 
 - [ ] fix css page centering
 
@@ -39,10 +40,10 @@ cd ~/Documents/VSCode/zoeySite
 - [x] social links
 
 footer
-- [ ] source code
-- [ ] pelican
-- [ ] lucide
-- [ ] catppuccin
+- [x] source code
+- [x] pelican
+- [ ] lucide (add these to readme)
+- [ ] catppuccin (add these to readme)
 
 optimize index (<14KB) 
 
