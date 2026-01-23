@@ -13,7 +13,86 @@
     max-width: 525px;
 }
 
+#project .section-item {
+    padding: 0px;
+}
+
+#project .body {
+    padding: 20px;
+}
+
 #project .indexItem {
     min-width: 500px;
     max-width: 700px;;
 } 
+
+#project a {
+    display: flex;
+}
+
+#project .titleLink {
+    text-decoration: none;
+
+    padding: 0;
+}
+
+#project .titleLink h1{
+    color: var(--ctp-latte-yellow);
+    font-weight: bold;
+}
+
+#project .titleLink:hover h1 {
+    color: var(--surface0);
+}
+
+
+#nameContainer {
+
+    width: 100%;
+
+    border-radius: 10px;
+
+    background: var(--surface1);
+    box-shadow: 
+    inset 0px 1px 3px color-mix(in hsl, hsl(from var(--surface1) h s l), white 20%),
+    inset 0px -1px 4px color-mix(in hsl, hsl(from var(--surface1) h s l), black 60%),
+    0px 4px 8px color-mix(in hsl, hsl(from var(--surface1) h s l), black 30%);
+
+    display: flex;
+
+    padding: 10px;
+
+    
+}
+
+a:hover #nameContainer {
+
+    background: var(--ctp-latte-yellow);
+    box-shadow: 
+    inset 0px 1px 3px color-mix(in hsl, hsl(from var(--ctp-latte-yellow) h s l), white 20%),
+    inset 0px -1px 4px color-mix(in hsl, hsl(from var(--ctp-latte-yellow) h s l), black 60%),
+    0px 4px 8px color-mix(in hsl, hsl(from var(--surface1) h s l), black 30%);
+
+    color: var(--surface1);
+}
+
+#project a:hover {
+    background: none;
+}
+
+#project h1, h2 {
+
+    margin: 0;
+    color: var(--ctp-latte-yellow);
+}
+
+/* #project h1 {
+    font-size: 3.571em;
+    line-height: 1.0;
+
+    text-align: center;
+} */
+
+#project .body p:first-child {
+    margin-top: 0px;
+}

@@ -40,11 +40,13 @@
 
     <section class="content_section">
 
-      <div class="section-item body">
+      <div class="section-item">
 
         <a class="titleLink" href="../{{ page.url }}"><div id="nameContainer"><h1>{{ page.title }}</h1></div></a>
+        <div class="body">
+          {{ page.content }}
+        </div>
         
-        {{ page.content }}
       </div><!-- /.entry-content -->
     </section>
 
