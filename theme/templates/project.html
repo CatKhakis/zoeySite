@@ -13,7 +13,7 @@
 {% block content %}
 
 {% from 'macros/titlebar.html' import content_title %}
-  {{ content_title(page, true, "page") }}
+  <!-- {{ content_title(page, true, "page") }} -->
 
 
   <page id="project" class="body">
@@ -39,7 +39,10 @@
   {% endif %}
 
     <section class="content_section">
+
       <div class="section-item body">
+
+        <a class="titleLink" href="../{{ page.url }}"><div id="nameContainer"><h1>{{ page.title }}</h1></div></a>
         
         {{ page.content }}
       </div><!-- /.entry-content -->

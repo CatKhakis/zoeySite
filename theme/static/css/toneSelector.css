@@ -2,11 +2,14 @@
 #shadeSelector {
     width: fit-content;
 
+    min-width: 34px;
+    min-height: 34px;
+
     position: fixed;
 
     right: 0;
 
-    margin: 15px;
+    margin: 20px;
 
     padding: 5px;
     display: flex;
@@ -26,10 +29,22 @@
 
     border-radius: 5px;
 
-    display: flex;
+    display: none;
     justify-content: center;
 
     pointer-events: auto;
+}
+
+#shadeSelector div.collapsed {
+    display: flex;
+}
+
+#shadeSelector:hover div {
+    display: flex;
+}
+
+#shadeSelector:hover div.collapsed {
+    display: none;
 }
 
 #shadeSelector svg {
