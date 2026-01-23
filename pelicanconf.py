@@ -1,5 +1,5 @@
-AUTHOR = 'zoey'
-SITENAME = 'zoeySite'
+AUTHOR = 'Violet Lark'
+SITENAME = 'LarkBarks'
 SITEURL = ""
 
 THEME = 'theme'

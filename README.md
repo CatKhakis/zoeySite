@@ -24,7 +24,7 @@ cd ~/Documents/VSCode/zoeySite
 ### functions
 - [x] fix links
 - [x] fix link highlighting
-- [ ] update shade selector
+- [x] update shade selector
 - [ ] tags
 - [ ] fix title tags
 - [ ] projects (pages with attached devlog posts)
@@ -32,9 +32,9 @@ cd ~/Documents/VSCode/zoeySite
 - [ ] fix zoey "flash" on load
 - [ ] zoey shadow
 
-- [ ] fix css page centering
+- [x] fix css page centering
 
-- [ ] site metadata
+- [x] site metadata
 - [x] favicon
 
 - [x] social links
