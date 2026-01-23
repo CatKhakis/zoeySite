@@ -75,8 +75,8 @@ a:hover #nameContainer {
     inset 0px -1px 4px color-mix(in hsl, hsl(from var(--surface0) h s l), black 60%);
 
     transition: 
-        height .25s ease-in-out,
-        margin-bottom .25s ease-in-out
+        height .25s cubic-bezier(0, 0.75, 0.35, 1),
+        margin-bottom .25s cubic-bezier(0, 0.75, 0.35, 1)
         ;
 
     display: flex;
@@ -276,7 +276,7 @@ a:hover #nameContainer {
 
     margin-top: 150px;
 
-    transition: height 0.25s;
+    transition: height 0.25s cubic-bezier(0, 0.75, 0.35, 1);
 }
 
 #zoeyHome:hover {

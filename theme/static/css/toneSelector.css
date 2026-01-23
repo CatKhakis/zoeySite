@@ -2,8 +2,7 @@
 #shadeSelector {
     width: fit-content;
 
-    min-width: 34px;
-    min-height: 34px;
+    height: 34px;
 
     position: fixed;
 
@@ -19,6 +18,15 @@
     border-radius: 10px;
 
     pointer-events: auto;
+
+    transition: height .15s cubic-bezier(0, 0.75, 0.35, 1);
+
+    overflow: hidden;
+}
+
+#shadeSelector:hover {
+
+    height: 151px;
 }
 
 #shadeSelector div {
