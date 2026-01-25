@@ -29,8 +29,8 @@ cd ~/Documents/VSCode/zoeySite
 - [ ] fix title tags
 - [ ] projects (pages with attached devlog posts)
 - [x] make zoey sprite static
-- [ ] fix zoey "flash" on load
-- [ ] zoey shadow
+- [x] fix zoey "flash" on load
+- [x] zoey shadow
 
 - [x] fix css page centering
 

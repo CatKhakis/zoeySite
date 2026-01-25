@@ -49,6 +49,7 @@ class Zoey {
         this.zoey.style.backgroundImage = `url(${nekoFile})`;
         this.zoey.style.backgroundSize = `${288 * this.scale}px ${128 * this.scale}px`;
 
+        this.drawSprite('sleep', 1);
         
         this.loopSprite = this.loopSprite.bind(this);
         window.requestAnimationFrame(this.loopSprite);
