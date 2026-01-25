@@ -1,11 +1,19 @@
-commands:
+# LarkBarks
+## Violet Lark's Blog (a.k.a Zoey)
+
+Powered by [Pelican](https://getpelican.com)
+Icons by [Lucide](https://lucide.dev)
+Colors by [Catppuccin](https://catppuccin.com)
+
+
+### commands to run locally:
 ```virtualenv ~/virtualenvs/pelican
 cd ~/virtualenvs/pelican
 source bin/activate
 cd ~/Documents/VSCode/zoeySite
-```
 
-```make devserver```
+make devserver
+```
 
 ## to-do
 
@@ -32,6 +40,8 @@ cd ~/Documents/VSCode/zoeySite
 - [x] fix zoey "flash" on load
 - [x] zoey shadow
 
+- [ ] index item
+
 - [x] fix css page centering
 
 - [x] site metadata
@@ -42,8 +52,8 @@ cd ~/Documents/VSCode/zoeySite
 footer
 - [x] source code
 - [x] pelican
-- [ ] lucide (add these to readme)
-- [ ] catppuccin (add these to readme)
+- [x] lucide (add these to readme)
+- [x] catppuccin (add these to readme)
 
 optimize index (<14KB) 
 
