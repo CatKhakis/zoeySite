@@ -17,6 +17,7 @@
 
     --red: var(--ctp-latte-red);
     --yellow: var(--ctp-latte-yellow);
+    --blue: var(--ctp-latte-blue);
 }
 
 .latte {
