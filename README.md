@@ -1,9 +1,7 @@
 # LarkBarks
 ## Violet Lark's Blog (a.k.a Zoey)
 
-Powered by [Pelican](https://getpelican.com)
-Icons by [Lucide](https://lucide.dev)
-Colors by [Catppuccin](https://catppuccin.com)
+Powered by [Pelican](https://getpelican.com) - Icons by [Lucide](https://lucide.dev) - Colors by [Catppuccin](https://catppuccin.com)
 
 
 ### commands to run locally:
@@ -40,12 +38,16 @@ make devserver
 - [x] fix zoey "flash" on load
 - [x] zoey shadow
 
+- [ ] mobile mode
+- [ ] mobile warning popup
+
 - [ ] index item
 
 - [x] fix css page centering
 
 - [x] site metadata
 - [x] favicon
+- [x] apple-touch icon
 
 - [x] social links
 
