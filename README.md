@@ -27,21 +27,32 @@ make devserver
 - [ ] home page
 - [ ] gallery
 
-### functions
+
+### mobile compatibility
+    - [ ] mobile mode
+    - [ ] mobile warning popup
+    - [ ] shade selector dismiss
+
+### zoey
+    - [x] make zoey sprite static
+    - [x] fix zoey "flash" on load
+    - [x] zoey shadow
+
+### - [ ] index item
+    - [ ] link hover
+    - [ ] add date
+
+### - [x] tags
+    - [ ] tags link hover
+    - [ ] add new tags to titlebar element
+
+### - [ ] projects page (pages with attached devlog posts)
+    - [ ] add title over index
+
 - [x] fix links
 - [x] fix link highlighting
+
 - [x] update shade selector
-- [ ] tags
-- [ ] fix title tags
-- [ ] projects (pages with attached devlog posts)
-- [x] make zoey sprite static
-- [x] fix zoey "flash" on load
-- [x] zoey shadow
-
-- [ ] mobile mode
-- [ ] mobile warning popup
-
-- [ ] index item
 
 - [x] fix css page centering
 
