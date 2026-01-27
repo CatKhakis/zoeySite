@@ -4,7 +4,7 @@ Date: 2025-7-11
 Day: 11
 Month: July
 Year: 2025
-Tags: development
+Tags: development, tag2
 
 {% from 'macros.html' import clean_break %}
 

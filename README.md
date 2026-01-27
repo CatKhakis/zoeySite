@@ -43,11 +43,13 @@ make devserver
     - [ ] add date
 
 ### - [x] tags
-    - [ ] tags link hover
+    - [x] fix tags link hover
     - [ ] add new tags to titlebar element
 
 ### - [ ] projects page (pages with attached devlog posts)
     - [ ] add title over index
+
+- [ ] index of all projects
 
 - [x] fix links
 - [x] fix link highlighting

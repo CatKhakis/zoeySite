@@ -63,7 +63,7 @@
 .entry-title a:link, .entry-title a:visited {text-decoration: none;}
 .entry-title a:visited {background-color: #fff;}
 
-.tag {
+.tag:link, .tag:visited {
     min-width: 0;
     height: fit-content;
     
@@ -83,19 +83,46 @@
     gap: 3px;
 
     border-radius: 5px;
-}
 
-.category {
-    background: var(--blue);
-    box-shadow: 
-    inset 0px -1px 4px color-mix(in hsl, hsl(from var(--blue) h s l), black 60%);
+    color: var(--crust);
+
+    text-decoration: none;
 }
 
 .tag svg {
     stroke: var(--crust);
 }
 
-.tag a:link, .tag a:visited {
+.tag:hover {
+    background: var(--crust);
+    box-shadow: 
+    inset 0px -1px 4px color-mix(in hsl, hsl(from var(--crust) h s l), black 60%);
 
-    color: var(--crust);
+    color: var(--red);
 }
+
+.tag:hover svg {
+    stroke: var(--red);
+}
+
+.category:link, .category:visited {
+    background: var(--blue);
+    box-shadow: 
+    inset 0px -1px 4px color-mix(in hsl, hsl(from var(--blue) h s l), black 60%);
+}
+
+.category:hover {
+    background: var(--crust);
+    box-shadow: 
+    inset 0px -1px 4px color-mix(in hsl, hsl(from var(--crust) h s l), black 60%);
+
+    color: var(--blue);
+}
+
+.category:hover svg {
+    stroke: var(--blue);
+}
+
+
+
+

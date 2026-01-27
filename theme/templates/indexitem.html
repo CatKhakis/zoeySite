@@ -9,10 +9,10 @@
                 <div class="indexTags">
                     {% if item.category %}
                     
-                        <div class="tag category">
+                        <a class="tag category" href="{{ SITEURL }}/{{ item.category.url }}">
                             {{ lucide("folder-open") }}
-                            <a href="{{ SITEURL }}/{{ item.category.url }}">{{ item.category }}</a>
-                        </div>
+                            {{ item.category }}
+                        </a>
                     {% endif %}
 
 
@@ -20,10 +20,10 @@
 
                         {% for tag in item.tags %}
 
-                            <div class="tag">
+                            <a class="tag" href="{{ SITEURL }}/{{ tag.url }}">
                                 {{ lucide("tag") }}
-                                <a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a>
-                            </div>
+                                {{ tag }}
+                            </a>
                         {% endfor %}
                     {% endif %}
                 </div>
