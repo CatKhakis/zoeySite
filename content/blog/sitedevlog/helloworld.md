@@ -1,10 +1,10 @@
 Title: Hello World! (draft)
-Category: devlog
+Category: ramblings
 Date: 2025-7-11
 Day: 11
 Month: July
 Year: 2025
-Tags: test, test2, large test !, awawawa, puppy, doggy
+Tags: development
 
 {% from 'macros.html' import clean_break %}
 
