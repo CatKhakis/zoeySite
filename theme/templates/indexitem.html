@@ -15,11 +15,8 @@
                         </a>
                     {% endif %}
 
-
                     {% if item.tags %}
-
                         {% for tag in item.tags %}
-
                             <a class="tag" href="{{ SITEURL }}/{{ tag.url }}">
                                 {{ lucide("tag") }}
                                 {{ tag }}
@@ -27,6 +24,7 @@
                         {% endfor %}
                     {% endif %}
                 </div>
+                
             </div>
             <div class="indexRow">
                 {% if item.cover %}

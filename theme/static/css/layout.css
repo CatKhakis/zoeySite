@@ -49,7 +49,7 @@
 
     display: flex;
     gap: 1em;
-    height: 65px;
+    height: 85px;
 
     margin: 0 auto;
     margin-bottom: 1em;
@@ -61,7 +61,7 @@
 }
 
 #titlebar .left {
-    flex-grow: 2;
+    flex-grow: 3;
 
     display: flex;
     justify-content: left;
@@ -85,24 +85,21 @@
     display: flex;
     flex-direction: row;
 
-    gap: 3px;
-}
-#titlebar .right p {
-    margin-top: 1px;
-    margin-bottom: 1px;
+    justify-content: flex-start;
+
+    gap: 8px;
 }
 
+#titlebar .indexTags {
 
+    height: inherit;
 
-#titlebar div.datacontainer {
-    border-radius: 5px;
+    width: fit-content;
 
-    padding: 2px;
-    padding-left: 7px;
-    padding-right: 7px;
+    justify-content: flex-start;
+
+    flex-shrink: 1;
 }
-
-
 
 
 html, body {

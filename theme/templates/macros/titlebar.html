@@ -11,29 +11,34 @@
 				<a href="../{{ article.url }}" rel="bookmark"
 					title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a>
 			</h1>
+			
 		</div>
 
 		<div class="right">
 
 			{% if type == "article" %}
-			<div class="flexColumn invisibleDiv">
-				<div class="flexRow invisibleDiv">
-					<div class="datacontainer flexCenter" title="{{ article.date.isoformat() }}">
-						{{ article.month }}
-					</div>
-					<div class="datacontainer flexCenter">
-						{{ article.day }}
-					</div>
-				</div>
-
-				<div class="datacontainer flexCenter">
-					{{ article.year }}
-				</div>
-			</div>
+				{% from 'macros/date.html' import date %}
+				{{ date(article, "stacked") }}
+				<!-- {{ date(article) }} -->
 			{% endif %}
 
-			<div class="flexCenter">
-				<img class="iconTag" src="../images/svgtags/devlog.svg" alt="devlog" />
+			<div class="indexTags">
+				{% if article.category %}
+				
+					<a class="tag category" href="{{ SITEURL }}/{{ article.category.url }}">
+						{{ lucide("folder-open") }}
+						{{ article.category }}
+					</a>
+				{% endif %}
+
+				{% if article.tags %}
+					{% for tag in article.tags %}
+						<a class="tag" href="{{ SITEURL }}/{{ article.url }}">
+							{{ lucide("tag") }}
+							{{ tag }}
+						</a>
+					{% endfor %}
+				{% endif %}
 			</div>
 		</div>
 

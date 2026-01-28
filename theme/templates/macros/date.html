@@ -1,0 +1,8 @@
+{% macro date(article, class) -%}
+
+    <div id="date" class={{ class }}>
+        <div>{{ article.month }}</div>
+        <div>{{ article.day }}</div>
+        <div>{{ article.year }}</div>
+    </div>
+{%- endmacro %}

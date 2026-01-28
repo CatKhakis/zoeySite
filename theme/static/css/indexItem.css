@@ -28,9 +28,6 @@
 
 .indexTags {
 
-    width: fit-content;
-    height: 73px;
-
     display: flex;
 
     flex-wrap: wrap;
@@ -39,6 +36,12 @@
 
     justify-content: flex-end;
     align-content: flex-start;
+}
+
+.indexItem.indexTags {
+
+    width: fit-content;
+    height: 73px;
 }
 
 .indexItem img {

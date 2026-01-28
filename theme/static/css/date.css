@@ -1,0 +1,47 @@
+#date {
+    height: 100%;
+
+    display: flex;
+    flex-wrap: nowrap;
+
+    justify-content: flex-start;
+    align-content: stretch;
+
+    gap: 3px
+}
+
+#date.stacked {
+    aspect-ratio: 4 / 3;
+    flex-wrap: wrap;
+}
+
+#date div {
+
+    flex-grow: 1;
+
+    min-height: 0px;
+    max-height: 100%;
+
+    border-radius: 5px;
+
+    background-color: var(--mantle);
+    box-shadow: 
+    inset 0px -1px 2px color-mix(in hsl, hsl(from var(--mantle) h s l), white 20%),
+    inset 0px 1px 2px color-mix(in hsl, hsl(from var(--mantle) h s l), black 20%);
+
+    filter: 
+    drop-shadow(0px 1px 1px color-mix(in hsl, hsl(from var(--surface0) h s l), white 05%))
+    drop-shadow(0px -1px 1px color-mix(in hsl, hsl(from var(--surface0) h s l), black 25%));
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    padding: 0px 10px 0px 10px;
+}
+
+#date .stacked div:last-child {
+    flex-basis: 33%;
+}
+
