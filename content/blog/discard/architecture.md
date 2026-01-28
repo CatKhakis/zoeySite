@@ -1,10 +1,9 @@
 Title: DISCARD architecture
-Category: devlog
 Date: 2026-1-16
 Day: 16
 Month: January
 Year: 2026
-status: hidden
+Tags: discard
 
 {% from 'macros.html' import clean_break %}
 

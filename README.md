@@ -30,7 +30,7 @@ make devserver
 
 ### mobile compatibility
     - [ ] mobile mode
-    - [ ] mobile warning popup
+    - [x] mobile warning popup
     - [ ] shade selector dismiss
 
 ### zoey
@@ -44,7 +44,7 @@ make devserver
 
 ### - [x] tags
     - [x] fix tags link hover
-    - [ ] add new tags to titlebar element
+    - [x] add new tags to titlebar element
 
 ### - [ ] projects page (pages with attached devlog posts)
     - [ ] add title over index

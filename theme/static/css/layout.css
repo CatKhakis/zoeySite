@@ -151,3 +151,28 @@ html, body {
 
     flex-grow: 1;
 }
+
+#mobilePopup {
+
+    display: none;
+}
+
+@media only screen and (max-width: 600px) {
+  #mobilePopup {
+    background-color: var(--crust);
+
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  body {
+    overflow: hidden
+  }
+}
+
