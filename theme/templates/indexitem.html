@@ -5,33 +5,46 @@
         <article>
             <div class="indexRow">
                 <h1 class="entry-title"><a href="{{ SITEURL }}/{{ item.url }}">{{ item.title }}</a></h1>
-
-                <div class="indexTags">
-                    {% if item.category %}
-                    
-                        <a class="tag category" href="{{ SITEURL }}/{{ item.category.url }}">
-                            {{ lucide("folder-open") }}
-                            {{ item.category }}
-                        </a>
-                    {% endif %}
-
-                    {% if item.tags %}
-                        {% for tag in item.tags %}
-                            <a class="tag" href="{{ SITEURL }}/{{ tag.url }}">
-                                {{ lucide("tag") }}
-                                {{ tag }}
-                            </a>
-                        {% endfor %}
-                    {% endif %}
-                </div>
                 
-            </div>
-            <div class="indexRow">
-                {% if item.cover %}
-                    <img src="{{ item.cover }}" class="img-fluid">
+                {% if item.month %}
+                    {% from 'macros/date.html' import date %}
+                    {{ date(item) }}
                 {% endif %}
-                <div>{{ item.summary }}</div>
             </div>
+
+            <div class="indexTags">
+                {% if item.category %}
+                
+                    <a class="tag category" href="{{ SITEURL }}/{{ item.category.url }}">
+                        {{ lucide("folder-open") }}
+                        {{ item.category }}
+                    </a>
+                {% endif %}
+
+                {% if item.tags %}
+                    {% for tag in item.tags %}
+                        <a class="tag" href="{{ SITEURL }}/{{ tag.url }}">
+                            {{ lucide("tag") }}
+                            {{ tag }}
+                        </a>
+                    {% endfor %}
+                {% endif %}
+            </div>
+            
+            {% if item.cover %}
+
+                <div class="indexRow">
+                    <img src="{{ item.cover }}">
+                    <div>{{ item.summary }}</div>
+                </div>
+            
+            {% else %}
+
+                <div class="indexRow">
+                    <div>{{ item.summary }}</div>
+                </div>
+            {% endif %}
+
         </article>
     </aside><!-- /#featured -->
 {%- endmacro %}

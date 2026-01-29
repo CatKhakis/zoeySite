@@ -24,24 +24,26 @@
     display: flex;
 
     justify-content: space-between;
+
+    margin-bottom: 5px;
 }
 
 .indexTags {
 
     display: flex;
 
-    flex-wrap: wrap;
-
     gap: 5px;
 
-    justify-content: flex-end;
-    align-content: flex-start;
+    justify-content: flex-start;
+}
+
+article .indexTags {
+    margin-bottom: 10px;
 }
 
 .indexItem.indexTags {
 
     width: fit-content;
-    height: 73px;
 }
 
 .indexItem img {
@@ -55,16 +57,34 @@
 
 .entry-title {
     font-size: 3em; 
-    margin-bottom: 10px; 
+    margin-bottom: 0; 
     margin-top: 0;
-    margin-right: 10px;
+    margin-right: 25px;
 
     text-wrap: nowrap;
 
+    height: min-content;
     width: fit-content;
 }
 .entry-title a:link, .entry-title a:visited {text-decoration: none;}
 .entry-title a:visited {background-color: #fff;}
+
+.indexRow #date {
+    height: auto;
+}
+
+.indexRow {
+    display: flex;
+}
+
+.indexRow img {
+    margin-right: 15px;
+}
+
+.indexRow p {
+    margin-top: 0.35em;
+    margin-bottom: 0.35em;
+}
 
 .tag:link, .tag:visited {
     min-width: 0;

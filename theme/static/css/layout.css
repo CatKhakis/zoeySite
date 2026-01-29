@@ -95,7 +95,10 @@
 
     height: inherit;
 
+    flex-wrap: wrap;
+
     justify-content: flex-start;
+    align-content: flex-start;
 
     flex-shrink: 1;
 }
