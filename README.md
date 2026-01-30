@@ -38,9 +38,9 @@ make devserver
     - [x] fix zoey "flash" on load
     - [x] zoey shadow
 
-### - [ ] index item
-    - [ ] link hover
-    - [ ] add date
+### - [x] index item
+    - [x] link hover
+    - [x] add date
 
 ### - [x] tags
     - [x] fix tags link hover

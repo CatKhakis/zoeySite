@@ -132,10 +132,6 @@ a:hover, a:active {
     text-shadow: none !important;
 }
 
-.entry-title a:link, .entry-title a:visited {
-    color: var(--ctp-latte-yellow);
-}
-
 .polaroid {
     background-color: var(--ctp-latte-base);
 }

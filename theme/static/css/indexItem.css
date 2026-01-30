@@ -66,8 +66,21 @@ article .indexTags {
     height: min-content;
     width: fit-content;
 }
-.entry-title a:link, .entry-title a:visited {text-decoration: none;}
-.entry-title a:visited {background-color: #fff;}
+
+.entry-title a:link, .entry-title a:visited {
+    color: var(--ctp-latte-yellow);
+}
+
+.entry-title a:link, .entry-title a:hover {
+    text-decoration: none;
+    background-color: transparent;
+}
+
+.entry-title:hover, .entry-title a:hover {
+    color: var(--surface0);
+    background-color: var(--ctp-latte-yellow);
+    border-radius: 5px;
+}
 
 .indexRow #date {
     height: auto;
