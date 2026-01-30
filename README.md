@@ -14,9 +14,7 @@ make devserver
 ```
 
 ## to-do
-
 ### project pages
-- [x] create pages
 - [ ] dashPuppy
 - [ ] homelab
 - [ ] ipod parsing
@@ -25,52 +23,14 @@ make devserver
 - [ ] discard
 
 - [ ] home page
+
+## roadmap
 - [ ] gallery
 
-
 ### mobile compatibility
-    - [ ] mobile mode
-    - [x] mobile warning popup
-    - [ ] shade selector dismiss
+- [ ] mobile mode
+- [x] mobile warning popup
+- [ ] shade selector dismiss
 
-### zoey
-    - [x] make zoey sprite static
-    - [x] fix zoey "flash" on load
-    - [x] zoey shadow
-
-### - [x] index item
-    - [x] link hover
-    - [x] add date
-
-### - [x] tags
-    - [x] fix tags link hover
-    - [x] add new tags to titlebar element
-
-### - [ ] projects page (pages with attached devlog posts)
-    - [ ] add title over index
-
+### misc
 - [ ] index of all projects
-
-- [x] fix links
-- [x] fix link highlighting
-
-- [x] update shade selector
-
-- [x] fix css page centering
-
-- [x] site metadata
-- [x] favicon
-- [x] apple-touch icon
-
-- [x] social links
-
-footer
-- [x] source code
-- [x] pelican
-- [x] lucide (add these to readme)
-- [x] catppuccin (add these to readme)
-
-optimize index (<14KB) 
-
-- [x] deduplicate github svg
-- [x] remove vestigal businesscard code (removing breaks tone selector)
