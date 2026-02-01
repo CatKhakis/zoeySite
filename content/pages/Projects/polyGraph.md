@@ -2,5 +2,6 @@ Title: polyGraph
 Icon: share-2
 Tags: Project
 Template: project
+Status: hidden
 
 polygraph

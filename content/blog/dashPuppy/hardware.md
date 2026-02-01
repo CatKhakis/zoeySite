@@ -6,6 +6,7 @@ Year: 2025
 Tags: dashPuppy
 Summary: Modern dashpuppy
 Cover:/images/projects/dashPuppy/moderndashPuppy.jpeg
+Status: hidden
 
 ![Photo](/images/projects/dashPuppy/moderndashPuppy.jpeg)
 

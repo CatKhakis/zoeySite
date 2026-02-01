@@ -29,6 +29,8 @@
     min-width: var(--center_content_min_width);
 
     flex-grow: 2;
+
+    height: fit-content;
 }
 
 #rightContent {
@@ -179,3 +181,6 @@ html, body {
   }
 }
 
+#content {
+    margin-bottom: 70px;
+}

@@ -34,3 +34,4 @@ make devserver
 
 ### misc
 - [ ] index of all projects
+- [ ] GH commit graph
