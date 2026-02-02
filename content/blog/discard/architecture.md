@@ -4,6 +4,7 @@ Day: 16
 Month: January
 Year: 2026
 Tags: discard
+Category: devlog
 
 {% from 'macros.html' import clean_break %}
 

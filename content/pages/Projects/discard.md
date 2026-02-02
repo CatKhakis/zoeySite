@@ -3,4 +3,4 @@ Icon: tv
 Tags: Project
 Template: project
 
-discard
+placeholder text
