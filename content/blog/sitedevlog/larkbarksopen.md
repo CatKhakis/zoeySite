@@ -156,7 +156,7 @@ The amount of projects on the sidebar right now is perfectly acceptable, but I k
 
 ### Optimization
 
-The codebase for the site is pretty well slimmed down to just what it needs to be but I know theres plenty more I could improve on. A lot of the CSS could use some re-organization to remove unnecessary attributes or even a full restructuring from the ground up to slim it down further. The index HTML page is less than 14KB so it can be fit inside a single packet and thats enough optimization for the time being. Further improvements will come later.
+The codebase for the site is pretty well slimmed down to just what it needs to be but I know there's plenty more I could improve on. A lot of the CSS could use some re-organization to remove unnecessary attributes or even a full restructuring from the ground up to slim it down further. The index HTML page is less than 14KB so it can be fit inside a single packet and thats enough optimization for the time being. Further improvements will come later.
 
 {{ clean_break() }}
 
